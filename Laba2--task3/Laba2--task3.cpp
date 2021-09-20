@@ -1,20 +1,39 @@
-﻿// Laba2--task3.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿//Лабораторная 2, задача 3. Выполнена: Воднев Д. И.
+
+/*
+Написать программу нахождения максимального из двух
+вещественных чисел X и Y с использованием тернарной операции. Написать
+два варианта программы. С использованием переменной логического типа для
+определения условия и без неё.
+*/
 
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    setlocale(LC_ALL, "Rus");
+    double X, Y;
+    cout << "Введите 2 вещественных числа X и Y\n";
+    cin >> X >> Y;
+    
+    // Вариант с использованием переменной логического типа
+    bool a = X > Y;
+    if (X == Y) {
+        cout << "X равен Y\n";
+    }
+    else {
+        a ? cout << "X - максимальное число\n" : cout << "Y - максимальное число\n";
+    }
+    
+/*
+    // Вариант без использования переменной логического типа
+    if (X == Y) {
+        cout << "X равен Y\n";
+    }
+    else {
+        X > Y ? cout << "X - максимальное число\n" : cout << "Y - максимальное число\n";
+    }
+*/
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
