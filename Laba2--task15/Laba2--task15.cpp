@@ -10,7 +10,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Rus");
-    double k;
+    long double k;
     cout << "Введите положительное количество грибов\n";
     cin >> k;
 

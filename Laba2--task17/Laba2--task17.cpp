@@ -20,7 +20,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Rus");
-    long long a;
+    long double a;
     cin >> a;
     cout << a;
     return 0;
