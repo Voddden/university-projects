@@ -29,6 +29,40 @@ int main() {
             if (z < -1) {
                 x = (-z) / 3;
 
+                y = a * (2 * x) - log(x + 2.5) + b * (exp(x) - exp(-x));
+                cout << "Значение выражения a * 2x - ln(x + 2.5) + b(e^x - e^(-x)) равно " << y << endl;
+            }
+            if (z >= -1) {
+                x = fabs(z);
+
+                y = a * (2 * x) - log(x + 2.5) + b * (exp(x) - exp(-x));
+                cout << "Значение выражения a * 2x - ln(x + 2.5) + b(e^x - e^(-x)) равно " << y << endl;
+            }
+            break;
+        case 2:
+            double a, b, z, x, y;
+            cout << "Введите переменные a, b, z в этом же порядке\n";
+            cin >> a >> b >> z;
+            if (z < -1) {
+                x = (-z) / 3;
+
+                y = a * (pow(x, 3)) - log(x + 2.5) + b * (exp(x) - exp(-x));
+                cout << "Значение выражения a * 2x - ln(x + 2.5) + b(e^x - e^(-x)) равно " << y << endl;
+            }
+            if (z >= -1) {
+                x = fabs(z);
+
+                y = a * (pow(x , 3) - log(x + 2.5) + b * (exp(x) - exp(-x));
+                cout << "Значение выражения a * 2x - ln(x + 2.5) + b(e^x - e^(-x)) равно " << y << endl;
+            }
+            break;
+        case 3:
+            double a, b, z, x, y;
+            cout << "Введите переменные a, b, z в этом же порядке\n";
+            cin >> a >> b >> z;
+            if (z < -1) {
+                x = (-z) / 3;
+
                 y = a * 2 * x - log(x + 2.5) + b * (exp(x) - exp(-x));
                 cout << "Значение выражения a * 2x - ln(x + 2.5) + b(e^x - e^(-x)) равно " << y << endl;
             }
@@ -38,12 +72,6 @@ int main() {
                 y = a * 2 * x - log(x + 2.5) + b * (exp(x) - exp(-x));
                 cout << "Значение выражения a * 2x - ln(x + 2.5) + b(e^x - e^(-x)) равно " << y << endl;
             }
-            break;
-        case 2:
-            cout << "Вы выбрали 2\n";
-            break;
-        case 3:
-            cout << "Вы выбрали 3\n";
             break;
     }
     return 0;
