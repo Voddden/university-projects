@@ -4,33 +4,19 @@
     Введены два числа. Выведите их НОД и НОК.
 */
 
-/*
 #include <iostream>
 using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Rus");
-
-    return 0;
-}
-*/
-
-
-
-#include <iostream>
-using namespace std;
-int gcd(int a, int b) {
-    return (a == 0) ? b : gcd(b % a, a);
-}
-
-int main() {
-    int n, m = 0;
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        int a;
+    int a, b;
+    while (1) {
+        cout << "Введите a\n";
         cin >> a;
-        m = gcd(m, a);
+        cout << "Введите b\n";
+        cin >> b;
+        
     }
-    cout << m;
+
     return 0;
 }
