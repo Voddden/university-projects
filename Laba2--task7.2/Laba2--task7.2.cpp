@@ -16,121 +16,63 @@ int main() {
     cout << "Введите переменные a, b, c\n";
     double a, b, c;
     cin >> a >> b >> c;
-    double y1, y2; // переменная для замены: y = x + 1/x
-
-    // Расчёт квадратного уравнения 1.0
-    double aSQ, bSQ, cSQ, D, x1SQ, x2SQ;
-    aSQ = a;
-    bSQ = b;
-    cSQ = c - 2 * a;
-    if (aSQ == 0) {
-        cout << "Ошибка! a не может быть равен нулю\n";
+    // 1-ое уравнение
+    if (a == 0) {
+        cout << "Ошибка, a = 0\n";
     }
     else {
-        D = pow(bSQ, 2) - 4 * aSQ * cSQ;
-        if (D < 0) {
-            cout << "Уравнение не имеет действительных корней\n";
+        double a1, b1, c1, D1, x1_1, x1_2;
+        a1 = a;
+        b1 = b;
+        c1 = c - 2 * a;
+        D1 = b1 * b1 - 4 * a1 * c1;
+        if (D1 < 0) {
+            //cout << "Решений нет\n";
         }
-        else if (D == 0) {
-            cout << "У квадратного уравнения оба корня равны\n";
-
+        else if (D1 == 0) {
+            cout << "error";
         }
         else {
-            x1SQ = (-b + sqrt(D)) / (2 * aSQ);
-            x2SQ = (-b - sqrt(D)) / (2 * aSQ);
-            y1 = x1SQ;
-            y2 = x2SQ;
-            
-            //Расчёт квадратного уравнения 2.1 (xSQ1 = y1)
-            double aSQ1, bSQ1, cSQ1, D1, x1SQ1, x2SQ1;
-            aSQ1 = 1;
-            bSQ1 = -y1;
-            cSQ1 = 1;
-            if (aSQ1 == 0) {
-                cout << "Ошибка2.1! a не может быть равен нулю\n";
+            x1_1 = (-b1 + sqrt(D1)) / (2 * a1);
+            x1_2 = (-b1 - sqrt(D1)) / (2 * a1);
+
+            // 2-ое уравнение
+            double a2, b2, c2, D2, x2_1, x2_2;
+            a2 = 1;
+            b2 = -x1_1;
+            c2 = 1;
+            D2 = b2 * b2 - 4 * a2 * c2;
+            if (D2 < 0) {
+                cout << "Решений нет\n";
+            }
+            else if (D2 == 0) {
+                cout << "error1\n";
             }
             else {
+                x2_1 = (-b2 + sqrt(D2)) / (2 * a2);
+                x2_2 = (-b2 - sqrt(D2)) / (2 * a2);
+                cout << "Корни уравнения:\n" << x2_1 << endl << x2_2 << endl;
 
-                D1 = pow(bSQ1, 2) - 4 * aSQ1 * cSQ1;
-                if (D1 < 0) {
-                    cout << "Уравнение не имеет действительных корней1\n";
+                // 3-ее уравнение
+
+                double a3, b3, c3, D3, x3_1, x3_2;
+                a3 = 1;
+                b3 = -x1_2;
+                c3 = 1;
+                D3 = b3 * b3 - 4 * a3 * c3;
+                if (D3 < 0) {
+                    cout << "Решений нет\n";
                 }
-                else if (D == 0) {
-
+                else if (D3 == 0) {
+                    cout << "error3\n";
                 }
                 else {
-                    x1SQ1 = (-bSQ1 + sqrt(D1)) / (2 * aSQ1);
-                    x2SQ1 = (-bSQ1 - sqrt(D1)) / (2 * aSQ1);
-                    X1 = x1SQ1;
-                    X2 = x2SQ1;
-                    cout << X1 << " " << X2 << endl;
-
-                    // Расчёт квадратного уравнения 2.2 (xSQ2 = y2)
-                    double aSQ2, bSQ2, cSQ2, D2, x1SQ2, x2SQ2;
-                    aSQ2 = 1;
-                    bSQ2 = -y2;
-                    cSQ2 = 1;
-                    if (aSQ2 == 0) {
-                        cout << "Ошибка2.2! a не может быть равен нулю\n";
-                    }
-                    else {
-                        D2 = pow(bSQ2, 2) - 4 * aSQ2 * cSQ2;
-                        if (D2 < 0) {
-                            cout << "Уравнение не имеет действительных корней2\n";
-                        }
-                        else if (D == 0) {
-
-                        }
-                        else {
-                            x1SQ2 = (-bSQ2 + sqrt(D2)) / (2 * aSQ2);
-                            x2SQ2 = (-bSQ2 - sqrt(D2)) / (2 * aSQ2);
-                            X3 = x1SQ2;
-                            X4 = x2SQ2;
-                            cout << X3 << " " << X4 << endl;
-                        }
-                    }
+                    x3_1 = (-b3 + sqrt(D3)) / (2 * a3);
+                    x3_2 = (-b3 - sqrt(D3)) / (2 * a3);
+                    cout << x3_1 << endl << x3_2 << endl;
                 }
-                
             }
-          
         }
     }
-
-
-    /*
-    double a, b, c;
-    cout << "Введите переменные a, b, c\n";
-    cin >> a >> b >> c;
-    if (a == 0) {
-        cout << "Ошибка, а равен нулю\n";
-    }
-    else if (c == 0) {
-        cout << "Ошибка, c равно нулю\n";
-    }
-    else {
-        if (b > 0) {
-            double D1, D2;
-            D1 = b * b - 4 * a * (c - 2 * a);
-            double x1, x2, x3, x4;
-            // + +
-            x1 = ((b + sqrt(b * b - 4 * a * (c - 2 * a))) / (-2 * a) + sqrt((b - sqrt(b * b - 4 * a * (c - 2 * a))) / (2 * a) - 4)) / (2 * a);
-            // - -
-            x2 = ((b - sqrt(b * b - 4 * a * (c - 2 * a))) / (-2 * a) - sqrt((b - sqrt(b * b - 4 * a * (c - 2 * a))) / (2 * a) - 4)) / (2 * a);
-            // + -
-            x3 = ((b + sqrt(b * b - 4 * a * (c - 2 * a))) / (-2 * a) - sqrt((b - sqrt(b * b - 4 * a * (c - 2 * a))) / (2 * a) - 4)) / (2 * a);
-            // - +
-            x4 = ((b - sqrt(b * b - 4 * a * (c - 2 * a))) / (-2 * a) + sqrt((b - sqrt(b * b - 4 * a * (c - 2 * a))) / (2 * a) - 4)) / (2 * a);
-
-            cout << "Корни уравнения: " << x1 << " " << x2 << " " << x3 << " " << x4 << endl;
-
-        }
-        else if (b < 0) {
-
-        }
-        else {
-            cout << "Произошла ошибка\n";
-        }
-    }
-    */
     return 0;
 }
