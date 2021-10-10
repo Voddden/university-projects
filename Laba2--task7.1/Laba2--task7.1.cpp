@@ -19,57 +19,58 @@ int main() {
         cout << "a = 0, ошибка\n";
     }
     else {
-        // переход к ay^2 + by + c = 0
-        double D;
-        D = b * b - 4 * a * c;
-        if (D < 0) {
-            cout << "Решений нет\n";
+        // Решение уравнения #1
+        double a1, b1, c1, D1, x1_1 = 0, x1_2 = 0;
+        a1 = a;
+        b1 = b;
+        c1 = c;
+        D1 = b1 * b1 - 4 * a1 * c1;
+        if (D1 < 0) {
+            cout << "Действительных корней нет\n";
         }
-        else if (D > 0) {
-            double y1, y2;
-            y1 = (-b + sqrt(D)) / (2 * a);
-            y2 = (-b - sqrt(D)) / (2 * a);
-            if (y1 > 0 && y2 > 0) {
-                double x1, x2;
-                x1 = sqrt(y1);
-                x2 = sqrt(y2);
-                cout << "Решения уравнения: " << x1 << " " << x2 << endl;
+        else if (D1 == 0) {
+            double x1_0;
+            x1_0 = (-b1) / (2 * a1);
+            if (x1_0 > 0) {
+                cout << "Корни уравнения:\n" << sqrt(x1_0) << endl << -sqrt(x1_0) << endl;
             }
-            else if (y1 < 0 && y2 > 0) {
-                double x2;
-                x2 = sqrt(y2);
-                cout << "Решение уравнения: " << x2 << endl;
+            else if (x1_0 < 0) {
+                cout << "Действительных корней нет\n";
             }
-            else if (y1 > 0 && y2 < 0) {
-                double x1;
-                x1 = sqrt(y1);
-                cout << "Решение уравнения: " << x1 << endl;
-            }
-            else if (y1 < 0 && y2 < 0) {
-                cout << "Решений нет\n";
-            }
-            // варианты с нулями
-            else if (y1 == 0 && y2 > 0) { // 1
-                cout << "Решения уравнения: " << 0 << " " << sqrt(y2) << endl;
-            }
-            else if (y1 == 0 && y2 < 0) { // 2
-                cout << "Решение уравнения: " << 0 << endl;
-            }
-            else if (y1 > 0 && y2 == 0) { // 3
-                cout << "Решения уравнения: " << sqrt(y1) << " " << 0 << endl;
-            }
-            else if (y1 < 0 && y2 == 0) { // 4
-                cout << "Решение уравнения: " << 0 << endl;
-            }
-            else if (y1 == 0 && y2 == 0) {
-                cout << "Решение уравнения: " << 0 << endl;
-            }
-            else {
-                cout << "Ошибка1\n";
+            else if (x1_0 == 0) {
+                cout << "Корень уравнения:\n" << 0 << endl;
             }
         }
-        else {
-            cout << "Ошибка\n";
+        else if (D1 > 0) {
+            x1_1 = (-b1 + sqrt(D1)) / (2 * a1);
+            x1_2 = (-b1 - sqrt(D1)) / (2 * a1);
+            if (x1_1 > 0 && x1_2 > 0) { // + +
+                cout << "Корни уравнения:\n" << sqrt(x1_1) << endl << -sqrt(x1_1) << endl << sqrt(x1_2) << endl << -sqrt(x1_2) << endl;
+            } 
+            else if (x1_1 > 0 && x1_2 < 0) { // + -
+                cout << "Корни уравнения:\n" << sqrt(x1_1) << endl << -sqrt(x1_1) << endl;
+            }
+            else if (x1_1 < 0 && x1_2 > 0) { // - +
+                cout << "Корни уравнения:\n" << sqrt(x1_2) << endl << -sqrt(x1_2) << endl;
+            }
+            else if (x1_1 < 0 && x1_2 < 0) { // - -
+                cout << "Действительных корней нет\n";
+            }
+            else if (x1_1 == 0 && x1_2 > 0) { // 0 +
+                cout << "Корни уравнения:\n" << 0 << endl << sqrt(x1_2) << endl << -sqrt(x1_2) << endl;
+            }
+            else if (x1_1 == 0 && x1_2 < 0) { // 0 -
+                cout << "Корень уравнения:\n" << 0 << endl;
+            }
+            else if (x1_1 > 0 && x1_2 == 0) { // + 0
+                cout << "Корни уравнения:\n" << sqrt(x1_1) << endl << -sqrt(x1_1) << endl << 0 << endl;
+            }
+            else if (x1_1 < 0 && x1_2 == 0) { // - 0
+                cout << "Корень уравнения:\n" << 0 << endl;
+            }
+            else if (x1_1 == 0 && x1_2 == 0) {
+                cout << "Корень уравнения:\n" << 0 << endl;
+            }
         }
     }
     return 0;
