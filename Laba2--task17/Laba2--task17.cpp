@@ -17,11 +17,39 @@
 
 #include <iostream>
 using namespace std;
+#include <cmath>
 
 int main() {
     setlocale(LC_ALL, "Rus");
-    long double a;
-    cin >> a;
-    cout << a;
+    cout << "Вводите данные в установленном порядке\n";
+    double W, H, x1, y1, x2, y2, w, h;
+    cin >> W >> H;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cin >> w >> h;
+    
+    double x, y; // ширина и высота первого стола
+    x = x2 - x1;
+    y = y2 - y1;
+
+    if (W > H) { // 1
+        if (x > y) { // 1.1
+            if (w > h) { // 1.1.1
+                
+            }
+        }
+        else if (x < y) { // 1.2
+
+        }
+        else if (x == y) { // 1.3
+
+        }
+    }
+    else if (W < H) { // 2
+
+    }
+    else if (W == h) { // 3
+
+    }
+
     return 0;
 }
