@@ -10,7 +10,6 @@ using namespace std;
 #include <cmath>
 
 int main() {
-    double X1 = 0, X2 = 0, X3 = 0, X4 = 0; // конечные ответы
     setlocale(LC_ALL, "Rus");
     cout << "7.2 ax^4 + bx^3 + cx^2 + bx + a = 0\n";
     cout << "Введите переменные a, b, c\n";
@@ -29,9 +28,6 @@ int main() {
         if (D1 < 0) {
             cout << "Решений нет\n";
         }
-        //else if (D1 == 0) {
-        //    cout << "error";
-        //}
         else if (D1 >= 0) {
             x1_1 = (-b1 + sqrt(D1)) / (2 * a1);
             x1_2 = (-b1 - sqrt(D1)) / (2 * a1);
@@ -42,17 +38,6 @@ int main() {
             b2 = -x1_1;
             c2 = 1;
             D2 = b2 * b2 - 4 * a2 * c2;
-            if (D2 < 0) {
-                cout << "Решений нет\n";
-            }
-            //else if (D2 == 0) {
-            //    cout << "error1\n";
-            //}
-            else if (D2 >= 0) {
-                x2_1 = (-b2 + sqrt(D2)) / (2 * a2);
-                x2_2 = (-b2 - sqrt(D2)) / (2 * a2);
-                cout << "Корни уравнения:\n" << x2_1 << endl << x2_2 << endl;
-            }
 
             // 3-ее уравнение
             double a3, b3, c3, D3, x3_1, x3_2;
@@ -60,16 +45,58 @@ int main() {
             b3 = -x1_2;
             c3 = 1;
             D3 = b3 * b3 - 4 * a3 * c3;
-            if (D3 < 0) {
-                cout << "Решений нет\n";
-            }
-            //else if (D3 == 0) {
-            //    cout << "error3\n";
-            //}
-            else if (D3 >= 0) {
+
+
+            if (D2 > 0 && D3 > 0) { // + + 
+                x2_1 = (-b2 + sqrt(D2)) / (2 * a2);
+                x2_2 = (-b2 - sqrt(D2)) / (2 * a2);
                 x3_1 = (-b3 + sqrt(D3)) / (2 * a3);
                 x3_2 = (-b3 - sqrt(D3)) / (2 * a3);
-                cout << x3_1 << endl << x3_2 << endl;
+                cout << "Корни уравнения:\n" << x2_1 << endl << x2_2 << endl << x3_1 << endl << x3_2 << endl;
+            }
+            else if (D2 > 0 && D3 < 0) { // + -
+                x2_1 = (-b2 + sqrt(D2)) / (2 * a2);
+                x2_2 = (-b2 - sqrt(D2)) / (2 * a2);
+                cout << "Корни уравнения:\n" << x2_1 << endl << x2_2 << endl;
+            }
+            else if (D2 < 0 && D3 > 0) { // - +
+                x3_1 = (-b3 + sqrt(D3)) / (2 * a3);
+                x3_2 = (-b3 - sqrt(D3)) / (2 * a3);
+                cout << "Корни уравнения:\n" << x3_1 << endl << x3_2 << endl;
+            }
+            else if (D2 < 0 && D3 < 0) { // - -
+                cout << "Корней нет\n";
+            }
+            else if (D2 == 0 && D3 > 0) { // 0 +
+                double x2_0;
+                x2_0 = (-b2) / (2 * a2);
+                x3_1 = (-b3 + sqrt(D3)) / (2 * a3);
+                x3_2 = (-b3 - sqrt(D3)) / (2 * a3);
+                cout << "Корни уравнения:\n" << x2_0 << endl << x3_1 << endl << x3_2 << endl;
+            }
+            else if (D2 == 0 && D3 < 0) { // 0 -
+                double x2_0;
+                x2_0 = (-b2) / (2 * a2);
+                cout << "Корень уравнения:\n" << x2_0 << endl;
+            }
+            else if (D2 > 0 && D3 == 0) { // + 0
+                double x3_0;
+                x3_0 = (-b3) / (2 * a3);
+                x2_1 = (-b2 + sqrt(D2)) / (2 * a2);
+                x2_2 = (-b2 - sqrt(D2)) / (2 * a2);
+                cout << "Корни уравнения:\n" << x3_0 << endl << x2_1 << endl << x2_2 << endl;
+            }
+            else if (D2 < 0 && D3 == 0) { // - 0
+                double x3_0;
+                x3_0 = (-b3) / (2 * a3);
+                cout << "Корень уравнения:\n" << x3_0 << endl;
+            }
+            else if (D2 == 0 && D3 == 0) { // 0 0
+                double x2_0;
+                x2_0 = (-b2) / (2 * a2);
+                double x3_0;
+                x3_0 = (-b3) / (2 * a3);
+                cout << "Корни уравнения:\n" << x2_0 << endl << x3_0 << endl;
             }
         }
     }
