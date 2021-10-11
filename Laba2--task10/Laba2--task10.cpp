@@ -45,23 +45,21 @@ int main() {
         lnx = 2 * totalValue;
         x = -x;
         //////////  sin cos start
-
         const double pi = 3.1415926535;
+
+        /*
         double angX = 180 / pi * x;
         if (angX > 180) {
             angX = angX - 180;
         }
-
-        
-
         sinx = (4 * angX * (180 - angX )) / (40500 - angX * (180 - angX));
-        
+        */
+        x > pi ? x = x - pi : cout << 101;
 
-        //cosx = (pi * pi - 4 * x * x) / (pi * pi + x * x);
-        //sinx = (16 * x * (pi - x)) / (5 * pi * pi - 4 * x * (pi - x));
-
-        cosx = 0;
-        cout << "cosx: " << cosx << endl << "sinx: " << sinx << endl << "lnx: " << lnx << endl;
+        cosx = (pi * pi - 4 * x * x) / (pi * pi + x * x);
+        sinx = (16 * x * (pi - x)) / (5 * pi * pi - 4 * x * (pi - x));
+        //cosx = 0;
+        cout << "cosx: " << cosx << endl << "sinx: " << sinx / 2 << endl << "lnx: " << lnx << endl;
 
         /*
         /////////////////////////////////////////// сравнение значений
