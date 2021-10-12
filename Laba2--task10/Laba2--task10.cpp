@@ -12,13 +12,10 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Rus");
 	const double pi = 3.1415926535;
-
 	cout << "Введите x\n";
 	double x;
 	cin >> x;
-
 	double LNX, SINX, COSX;
-
 	if (x == 0) {
 		cout << "Ошибка, x не может быть равен нулю\n";
 	}
@@ -43,9 +40,7 @@ int main() {
 			}
 			double lnx;
 			lnx = 2 * totalValue;
-			//cout << "lnx: " << lnx << endl;
 			LNX = lnx;
-
 		}
 		else {
 			while (count <= it)
@@ -54,7 +49,6 @@ int main() {
 					z *= (x - 1) / (x + 1);
 				}
 				y = (1 / powe) * z;
-
 				totalValue = totalValue + y;
 				powe = powe + 2;
 				count++;
@@ -62,7 +56,6 @@ int main() {
 			}
 			double lnx;
 			lnx = 2 * totalValue;
-			//cout << "lnx: " << lnx << endl;
 			LNX = lnx;
 		}
 		//// ln - 0
@@ -72,7 +65,6 @@ int main() {
 		while (xSIN1 > 2 * pi) {
 			xSIN1 = xSIN1 - 2 * pi;
 		}
-
 		if (xSIN1 > 0 && xSIN1 < pi / 2) { // 1 четверть +
 			double xSIN = x;
 			if (xSIN > pi) {
@@ -81,13 +73,11 @@ int main() {
 				}
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << sinx << endl;
 				SINX = sinx;
 			}
 			else {
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << sinx << endl;
 				SINX = sinx;
 			}
 		}
@@ -99,13 +89,11 @@ int main() {
 				}
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << sinx << endl;
 				SINX = sinx;
 			}
 			else {
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << sinx << endl;
 				SINX = sinx;
 			}
 		}
@@ -117,13 +105,11 @@ int main() {
 				}
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << -sinx << endl;
 				SINX = -sinx;
 			}
 			else {
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << -sinx << endl;
 				SINX = -sinx;
 			}
 		}
@@ -135,13 +121,11 @@ int main() {
 				}
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << -sinx << endl;
 				SINX = -sinx;
 			}
 			else {
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << -sinx << endl;
 				SINX = -sinx;
 			}
 		}
@@ -153,7 +137,6 @@ int main() {
 		while (xCOS1 > 2 * pi) {
 			xCOS1 = xCOS1 - 2 * pi;
 		}
-
 		if (xCOS1 > 0 && xCOS1 < pi / 2) { // 1 четверть +
 			double xCOS = x;
 			if (xCOS > pi) {
@@ -162,13 +145,11 @@ int main() {
 				}
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << cosx << endl;
 				COSX = cosx;
 			}
 			else {
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << cosx << endl;
 				COSX = cosx;
 			}
 		}
@@ -180,14 +161,12 @@ int main() {
 				}
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << -cosx << endl;
 				COSX = -cosx;
 			}
 			else {
 				double cosx;
 				xCOS = xCOS - pi;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << -cosx << endl;
 				COSX = -cosx;
 			}
 		}
@@ -199,13 +178,11 @@ int main() {
 				}
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << -cosx << endl;
 				COSX = -cosx;
 			}
 			else {
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << -cosx << endl;
 				COSX = -cosx;
 			}
 		}
@@ -217,13 +194,11 @@ int main() {
 				}
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << cosx << endl;
 				COSX = cosx;
 			}
 			else {
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << cosx << endl;
 				COSX = cosx;
 			}
 		}
@@ -231,8 +206,6 @@ int main() {
 
 		
 		//cout << "lnx: " << LNX << endl << "sinx: " << SINX << endl << "cosx: " << COSX << endl << endl;
-		
-
 		if (LNX < SINX && LNX < COSX) {
 			cout << "Функция lnx является наименьшей, и равной " << LNX << endl;
 		}
@@ -260,13 +233,10 @@ int main() {
 				powe = powe + 2;
 				count++;
 				z = 1;
-
 			}
 			double lnx;
 			lnx = 2 * totalValue;
-			//cout << "lnx: " << lnx << endl;
 			LNX = lnx;
-
 		}
 		else {
 			while (count <= it)
@@ -275,7 +245,6 @@ int main() {
 					z *= (-x - 1) / (-x + 1);
 				}
 				y = (1 / powe) * z;
-
 				totalValue = totalValue + y;
 				powe = powe + 2;
 				count++;
@@ -283,7 +252,6 @@ int main() {
 			}
 			double lnx;
 			lnx = 2 * totalValue;
-			//cout << "lnx: " << lnx << endl;
 			LNX = lnx;
 		}
 		//// ln - 0
@@ -294,7 +262,6 @@ int main() {
 		while (xSIN1 > 2 * pi) {
 			xSIN1 = xSIN1 - 2 * pi;
 		}
-
 		if (xSIN1 > 0 && xSIN1 < pi / 2) { // 1 четверть +
 			double xSIN = -x;
 			if (xSIN > pi) {
@@ -303,13 +270,11 @@ int main() {
 				}
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << sinx << endl;
 				SINX = -sinx;
 			}
 			else {
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << sinx << endl;
 				SINX = -sinx;
 			}
 		}
@@ -321,13 +286,11 @@ int main() {
 				}
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << sinx << endl;
 				SINX = -sinx;
 			}
 			else {
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << sinx << endl;
 				SINX = -sinx;
 			}
 		}
@@ -339,13 +302,11 @@ int main() {
 				}
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << -sinx << endl;
 				SINX = sinx;
 			}
 			else {
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << -sinx << endl;
 				SINX = sinx;
 			}
 		}
@@ -357,13 +318,11 @@ int main() {
 				}
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << -sinx << endl;
 				SINX = sinx;
 			}
 			else {
 				double sinx;
 				sinx = (16 * xSIN * (pi - xSIN)) / (5 * pi * pi - 4 * xSIN * (pi - xSIN));
-				//cout << "sinx: " << -sinx << endl;
 				SINX = sinx;
 			}
 		}
@@ -375,7 +334,6 @@ int main() {
 		while (xCOS1 > 2 * pi) {
 			xCOS1 = xCOS1 - 2 * pi;
 		}
-
 		if (xCOS1 > 0 && xCOS1 < pi / 2) { // 1 четверть +
 			double xCOS = -x;
 			if (xCOS > pi) {
@@ -384,13 +342,11 @@ int main() {
 				}
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << cosx << endl;
 				COSX = cosx;
 			}
 			else {
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << cosx << endl;
 				COSX = cosx;
 			}
 		}
@@ -402,14 +358,12 @@ int main() {
 				}
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << -cosx << endl;
 				COSX = -cosx;
 			}
 			else {
 				double cosx;
 				xCOS = xCOS - pi;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << -cosx << endl;
 				COSX = -cosx;
 			}
 		}
@@ -421,13 +375,11 @@ int main() {
 				}
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << -cosx << endl;
 				COSX = -cosx;
 			}
 			else {
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << -cosx << endl;
 				COSX = -cosx;
 			}
 		}
@@ -439,13 +391,11 @@ int main() {
 				}
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << cosx << endl;
 				COSX = cosx;
 			}
 			else {
 				double cosx;
 				cosx = (pi * pi - 4 * xCOS * xCOS) / (pi * pi + xCOS * xCOS);
-				//cout << "cosx: " << cosx << endl;
 				COSX = cosx;
 			}
 		}
@@ -453,8 +403,6 @@ int main() {
 
 		
 		//cout << "lnx: " << LNX << endl << "sinx: " << SINX << endl << "cosx: " << COSX << endl << endl;
-		
-
 		if (LNX < SINX && LNX < COSX) {
 			cout << "Функция lnx является наименьшей, и равной " << LNX << endl;
 		}
