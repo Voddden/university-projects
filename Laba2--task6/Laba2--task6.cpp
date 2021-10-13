@@ -11,24 +11,23 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Rus");
     double a, b, c;
-    char N;
-    
+    int N; 
     cout << "Введите переменные в таком порядке: N, a, b, c\n";
     cin >> N >> a >> b >> c;
     switch (N) {
-        case '2' :
+        case 2:
             cout << "Y равно " << b * c - a * a << endl;
             break;
-        case '56' : 
+        case 56: 
             cout << "Y равно " << b * c << endl;
             break;
-        case '7' :
+        case 7:
             cout << "Y равно " << a * a + c << endl;
             break;
-        case '3' :
+        case 3:
             cout << "Y равно " << a - b * c << endl;
             break;
-        default :
+        default:
             cout << "Y равно " << pow(a + b, 3) << endl;
             break;
     }
