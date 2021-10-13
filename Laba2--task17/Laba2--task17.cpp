@@ -18,6 +18,7 @@
 #include <iostream>
 using namespace std;
 #include <cmath>
+#include <iomanip>
 
 int main() {
     setlocale(LC_ALL, "Rus");
@@ -33,44 +34,50 @@ int main() {
         double x, y; // ширина и высота первого стола
         x = x2 - x1;
         y = y2 - y1;
-        if ((h + y <= H || w + x <= W) && h + y <= 2 * H && w + x <= 2 * w) { // столы влезают в комнату
-            if (h + y > y2 || w + x > x2) { // столы пересекаются
-                double wX, wY; // ширина и высота прямоугольника, полученного пересечением двух столов
-                wX = x + w - x2;
-                wY = y + h - y2;
-                if (wX > wY) { // верхнее пересечение. Двигать будем вверх
-                    double Y1, Y2;
-                    Y1 = y1 + wY;
-                    Y2 = y2 + wY; // подвинул стол
-                    double dist;
-                    dist = Y2 - y2;
-                    cout << "Ответ:\n" << dist << endl;
+        if (h + y <= H || w + x <= W) { // столы влезают в комнату
+            if (h + y <= 2 * H && w + x <= 2 * W) { // 2-ая проверка на влезание
+                if (h + y > y2 || w + x > x2) { // столы пересекаются
+                    double wX, wY; // ширина и высота прямоугольника, полученного пересечением двух столов
+                    wX = x + w - x2;
+                    wY = y + h - y2;
+                    if (wX > wY) { // верхнее пересечение. Двигать будем вверх
+                        double Y1, Y2;
+                        Y1 = y1 + wY;
+                        Y2 = y2 + wY; // подвинул стол
+                        double dist;
+                        dist = Y2 - y2;
+                        cout << "Ответ:\n" << fixed << setprecision(6) << dist << endl;
+                    }
+                    else if (wX < wY) { // нижнее пересечение. Двигать будем вправо
+                        double X1, X2;
+                        X1 = x1 + wX;
+                        X2 = x2 + wX;
+                        double dist;
+                        dist = X2 - x2;
+                        cout << "Ответ:\n" << fixed << setprecision(6) << dist << endl;
+                    }
+                    else if (wX == wY) { // диагональное пересечение столов. Двигать будем по диагонали
+                        double X1, Y1, X2, Y2;
+                        X1 = x1 + wX;
+                        X2 = x2 + wX;
+                        Y1 = y1 + wY;
+                        Y2 = y2 + wY;
+                        double dist;
+                        dist = wX * sqrt(2);
+                        cout << "Ответ:\n" << fixed << setprecision(6) << dist << endl;
+                    }
                 }
-                else if (wX < wY) { // нижнее пересечение. Двигать будем вправо
-                    double X1, X2;
-                    X1 = x1 + wX;
-                    X2 = x2 + wX;
-                    double dist;
-                    dist = X2 - x2;
-                    cout << "Ответ:\n" << dist << endl;
-                }
-                else if (wX == wY) { // диагональное пересечение столов. Двигать будем по диагонали
-                    double X1, Y1, X2, Y2;
-                    X1 = x1 + wX;
-                    X2 = x2 + wX;
-                    Y1 = y1 + wY;
-                    Y2 = y2 + wY;
-                    double dist;
-                    dist = wX * sqrt(2);
-                    cout << "Ответ:\n" << dist << endl;
+                else { // столы не пересекаются
+                    cout << "1-ый стол двигать не надо, 2-ой влазит и так\n";
                 }
             }
-            else { // столы не пересекаются
-                cout << "1-ый стол двигать не надо, 2-ой влазит и так\n";
+            else {
+                cout << "-1 Столы не помещаются в комнату\n";
             }
+            
         }
         else {
-            cout << "Столы не помещаются в комнату\n";
+            cout << "-1 Столы не помещаются в комнату\n";
         }
 
     }
