@@ -22,14 +22,16 @@ int main() {
             cout << "Y равно " << b * c << endl;
             break;
         case 7:
+        default:
+            cout << "Y равно " << pow(a + b, 3) << endl;
+
             cout << "Y равно " << a * a + c << endl;
             break;
         case 3:
             cout << "Y равно " << a - b * c << endl;
             break;
-        default:
-            cout << "Y равно " << pow(a + b, 3) << endl;
-            break;
+
+            //break;
     }
     return 0;
 }
