@@ -1,20 +1,17 @@
 ﻿//Лабораторная 3, задача 1 Выполнена: Воднев Д. И.
 
 /*
-    Вычислить N
+    вычислить сумму, использую цикл while
 */
 
-#include <iostream>
 using namespace std;
+#include <iostream>
 
 int main() {
     setlocale(LC_ALL, "Rus");
 
     double N = 0, a, b;
     int i = 1;
-
-    //cout << "Введите N\n";
-    //cin >> N;
     while (i <= 30) {
         if (i % 2 == 1) { // нечётное
             a = i;
@@ -26,9 +23,10 @@ int main() {
             b = i * i * i;
             N = N + (a - b) * (a - b);
         }
-        
+
         ++i;
     }
     cout << "Ответ:\n" << N << endl;
+
     return 0;
 }

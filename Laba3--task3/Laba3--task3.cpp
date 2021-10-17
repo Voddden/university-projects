@@ -1,14 +1,30 @@
-﻿//Лабораторная , задача . Выполнена: Воднев Д. И.
+﻿//Лабораторная 3, задача 3 Выполнена: Воднев Д. И.
 
 /*
-
+    Вычислить функцию, используя цикл for
 */
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Rus");
+    const double pi = 3.1415;
+    cout << "Введите переменные в следующем порядке: A, B, M\n";
+    double A, B, M;
+    cin >> A >> B >> M;
+    double x, H;
+    H = (B - A) / M;
+    
+    for (int i = 0; (A + i * H) <= B; ++i) {
+        x = A + i * H;
+        cout << sin(x) - cos(x) << endl;
+    }
+    
+    //cout << sin(x) << endl << cos(x) << endl;
+    //y = sin(x) - cos(x);
+    
 
     return 0;
 }
