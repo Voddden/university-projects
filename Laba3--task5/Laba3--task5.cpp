@@ -28,7 +28,7 @@ int main() {
         int n;
         cin >> n;
         cout << "---Введите количество чисел, от которых он хотите посчитать функцию\n";
-        int x;
+        double x;
         cin >> x;
         // конец ввода численных данных
         if (cin.fail()) { // проверка на ввод символов
@@ -43,7 +43,7 @@ int main() {
         }
         else {
             // начало программы
-            long long s = 0;
+            long double s = 0;
             for (int i = 0; i < n; ++i) {
                 s += (2 * i + 1) / fact(i) * pow(x, 2 * i);
             }
