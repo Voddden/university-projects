@@ -11,9 +11,8 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Rus");
     const double pi = 3.1415;
-    cout << "Введите переменные в следующем порядке: A, B, M\n";
-    double A, B, M;
-    cin >> A >> B >> M;
+    //cout << "Введите переменные в следующем порядке: A, B, M\n";
+    double A = 0, B = pi / 2, M = 20;
     double x, H;
     H = (B - A) / M;
     
