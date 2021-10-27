@@ -35,15 +35,17 @@ int main() {
         }
         else {
             // начало программы
+            //cout << "Hi\n";
             int y = 0;
-            int s = 2e10;
+            int s = 2e5;
             int x = -1;
-            double step = 2 / n;
-
-            for (double(x += step); x <= 1; ) {
+            double step = 2.0 / n;
+            
+            for ( ; x <= 1; x += step) {
 
                 y = cosh(x * x) - acos(x);
                 if (fabs(y) < s) s = fabs(y);
+                cout << s << endl;
             }
             cout << "Корень уравнения:\n" << s << endl;
             // конец программы
