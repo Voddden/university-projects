@@ -11,43 +11,40 @@
 корень и вывести его.
 */
 
-using namespace std;
 #include <iostream>
-#include <cmath>
+using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "Rus");
-    while (true) {
-        // начало ввода численных данных
-        cout << "На сколько частей разделить интервал?\n";
-        int n;
-        cin >> n;
-        // конец ввода численных данных
-        if (cin.fail()) { // проверка на ввод символов
-            cin.clear();
-            cin.ignore(32767, '\n');
-            cout << "Введены некорректные данные\n";
-            continue;
-        }
-        else if (n <= 0) { // проверка на ввод неверных численных значений
-            cout << "Введены некорректные данные\n";
-            continue;
-        }
-        else {
-            // начало программы
-            double step = 2 / (double)n;
-            cout << "step === " << step << endl;
-            int wtf = 0;
-            for (double i = -1; i <= 1; i = i + step) {
-                if (cosh(i * i) == acos(i)) {
-                    ++wtf;
-                }
-                else cout << 1;
-            }
-            cout << "WTF === " << wtf << endl;
-            // конец программы
-            continue;
-        }
-    }
-    return 0;
+	setlocale(LC_ALL, "ru");
+	long double x, xi, i, y, s;
+	long long int n;
+
+	cout << "Эта программа приближенно находит корень уравнения f(x) = 0 для функции cosh(x^2) - arccos(x), x = [-1;1]\n";
+	cout << "Введите, на сколько частей вы хотите разделить область поиска корня: ";
+	cin >> n;
+
+	while (cin.fail() || cin.get() != '\n' || n != (long long)n || n <= 0) {
+		cin.clear();
+		cin.ignore(99999, '\n');
+		cout << "\nВы ввели неверное значение n, попробуйте ввести целое положительное число: ";
+		cin >> n;
+	}
+
+	i = 1. / n;
+	x = -1 - i;
+	s = 2e10;
+
+	while ((x += i) <= 1) {
+
+		y = cosh(x * x) - acos(x);
+
+		if (abs(y) < s) {
+
+			s = abs(y);
+			xi = x;
+		}
+	}
+
+	cout << "Приближенный корень уравнения равен " << xi << endl;
+
 }
