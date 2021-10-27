@@ -1,62 +1,116 @@
-﻿//Лабораторная 3, задача 5 Выполнена: Воднев Д. И.
-
-/*
-Необходимо разложить функцию Y(x) из своего варианта в ряд
-S(x), затем с помощью полученного ряда найти значение функции и сравнить его
-со значением, вычисленным с помощью стандартных функций. Программа
-должна запросить у пользователя количество членов ряда (n), затем запросить у
-пользователя количество чисел, от которых он хочет посчитать функцию, затем
-пользователь вводит по одному числу (x от 0.1, до 1), программа считает значение
-функции с помощью ряда и с помощью стандартных функций и выводит оба
-значения.
-*/
-
+﻿#include <iostream>
 using namespace std;
-#include <iostream>
-#include <cmath>
 
-long long fact(long long x) {
-    if (x == 0 || x == 1) return 1;
-    else return x * fact(x - 1);
+long double fact(long double x) {
+
+	if (x == 0 || x == 1) {
+
+		return 1;
+	}
+	else {
+
+		return x * fact(x - 1);
+	}
+}
+
+long double power(long double x, long double y) {
+
+	long double s = 1;
+
+	while (y > 0) {
+
+		s = s * x;
+		y--;
+	}
+
+	return s;
+}
+
+long double ln(long double x) {
+
+	double s = 0;
+
+	for (int i = 1; i < 101; i += 2) {
+
+		s += power((x - 1) / (x + 1), i) / i;
+	}
+
+	s *= 2;
+
+	return s;
+}
+
+long double power_d(long double y, long  double x) {
+
+	double s = 1;
+
+	for (int i = 1; i < 100; i++) {
+
+		s += power(x * ln(y), i) / fact(i);
+	}
+
+	return s;
 }
 
 int main() {
-    setlocale(LC_ALL, "Rus");
-    while (true) {
-        // начало ввода численных данных
-        cout << "---Введите количество членов ряда\n";
-        int n;
-        cin >> n;
-        cout << "---Введите количество чисел, от которых он хотите посчитать функцию\n";
-        int m;
-        cin >> m;
-        // конец ввода численных данных
-        if (cin.fail()) { // проверка на ввод символов
-            cin.clear();
-            cin.ignore(32767, '\n');
-            cout << "Введены некорректные данные\n";
-            continue;
-        }
-        else if (n <= 0 || x <= 0) { // проверка на ввод неверных численных значений
-            cout << "Введены некорректные данные\n";
-            continue;
-        }
-        else {
-            // начало программы
-            double x;
-            for (int i = 0; i < m; ++i) {
-                cin >> x;
-                long double s = 0;
-                for (int i = 0; i < n; ++i) {
-                    s += (2 * i + 1) / fact(i) * pow(x, 2 * i);
-                }
-                cout << "Значение ряда:\n" << s << endl;
-                cout << "Значение функции:\n" << (1 + 2 * x * x) * exp(x * x) << endl;
-            }
+	setlocale(LC_ALL, "Rus");
+	long double x, s;
+	int n, nx, i = 0, j;
 
-            // конец программы
-            continue;
-        }
-    }
-    return 0;
+	cout << "Эта программа находит значение (1+2x^2)e^x^2 двумя способами:\n1.Через функцию \n";
+	cout << "2.Через ряд Тейлора\n\nВведите количество членов ряда которые вы хотите использовать(n): ";
+	cin >> n;
+
+	while (cin.fail() || cin.peek() != '\n' || n != (long long)n || n <= 0) {
+
+		cin.clear();
+		cin.ignore(99999, '\n');
+
+		cout << "\nВы ввели неверное значение n, введите целое положительное число: ";
+		cin >> n;
+	}
+
+	cout << "\nВведите количество чисел, от которых хотите посчитать функцию: ";
+	cin >> nx;
+
+	while (cin.fail() || cin.peek() != '\n' || nx != (long long)nx || nx <= 0) {
+
+		cin.clear();
+		cin.ignore(99999, '\n');
+
+		cout << "\nВы ввели неверное значение, введите целое положительное число: ";
+		cin >> nx;
+	}
+
+	while (++i <= nx) {
+
+		cout << "\nВведите " << i << " значение x [0.1;1] : ";
+		cin >> x;
+
+		while (cin.fail() || cin.peek() != '\n' || x > 1 || x < 0.1) {
+
+			cin.clear();
+			cin.ignore(99999, '\n');
+
+			cout << "\nВы ввели неверное значение x, попробуйте ввести число в промежутке от 0.1 до 1: ";
+			cin >> x;
+		}
+
+		j = 0;
+		s = 0;
+		/*
+		while (++j <= n) {
+
+			s += power(2 * x, j) / fact(j);
+		}
+		*/
+		while (++j <= n) { // n == j
+
+			s += ((2 * j + 1) / fact(j)) * power(x, 2 * j);
+		}
+		cout << "1.Через функцию: " << (1 + 2 * x * x) * power_d(2.71828182846, x * x) << endl;
+		cout << "2.Через ряд Тейлора: " << s << endl;
+	}
+
+	return 0;
 }
