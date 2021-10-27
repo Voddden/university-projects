@@ -30,7 +30,6 @@ int main() {
         cout << "---Введите количество чисел, от которых он хотите посчитать функцию\n";
         int m;
         cin >> m;
-
         // конец ввода численных данных
         if (cin.fail()) { // проверка на ввод символов
             cin.clear();
@@ -44,18 +43,17 @@ int main() {
         }
         else {
             // начало программы
-            /*
             double x;
             for (int i = 0; i < m; ++i) {
                 cin >> x;
+                long double s = 0;
+                for (int i = 0; i < n; ++i) {
+                    s += (2 * i + 1) / fact(i) * pow(x, 2 * i);
+                }
+                cout << "Значение ряда:\n" << s << endl;
+                cout << "Значение функции:\n" << (1 + 2 * x * x) * exp(x * x) << endl;
             }
-            */
-            long double s = 0;
-            for (int i = 0; i < n; ++i) {
-                s += (2 * i + 1) / fact(i) * pow(x, 2 * i);
-            }
-            cout << "Значение ряда:\n" << s << endl;
-            cout << "Значение функции:\n" << (1 + 2 * x * x) * exp(x * x) << endl;
+
             // конец программы
             continue;
         }
