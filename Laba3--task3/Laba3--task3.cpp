@@ -11,19 +11,15 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Rus");
     const double pi = 3.14;
-    //cout << "Введите переменные в следующем порядке: A, B, M\n";
     double A = 0, B = pi / 2, M = 20;
     double x, H;
     H = (B - A) / M;
-    cout << "Вычисление значений функции на заданном промежутке [A;B]\n";
+    cout << "Вычисление значений функции на заданном промежутке аргумента [" << A << ";" << B << "]\n";
     for (int i = 0; (A + i * H) <= B; ++i) {
         x = A + i * H;
         cout << sin(x) - cos(x) << endl;
     }
-    
     //cout << sin(x) << endl << cos(x) << endl;
     //y = sin(x) - cos(x);
-    
-
     return 0;
 }
