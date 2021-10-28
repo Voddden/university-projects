@@ -6,6 +6,7 @@
 
 using namespace std;
 #include <iostream>
+#include <iomanip>
 
 int main() {
     setlocale(LC_ALL, "Rus");
@@ -26,7 +27,7 @@ int main() {
 
         ++i;
     }
-    cout << "Ответ:\n" << N << endl;
+    cout << "Ответ:\n" << setprecision(10) << N << endl;
 
     return 0;
 }

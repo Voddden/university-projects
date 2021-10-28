@@ -10,11 +10,13 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Rus");
     double d = 1;
-    int n = 0;
+    int n = 1;
+    long double sum = 0;
     do {
-        d = 1 / pow(2, n) + 1 / pow(3, n);
+        d = 1. / pow(2, n) + 1. / pow(3, n);
+        sum += d;
         ++n;
     } while (d >= 0.001);
-    cout << "Ответ:\n" << d << endl;
+    cout << "Ответ:\n" << sum << endl;
     return 0;
 }
