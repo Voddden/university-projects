@@ -1,20 +1,61 @@
-﻿// Laba4--task1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿//Лабораторная 4, задача 1 Выполнена: Воднев Д. И.
 
+/*
+	Ввести 1-мерный статический массив 
+	Вариант 5: вывести все неповторяющиеся элементы массива
+*/
+
+using namespace std;
 #include <iostream>
+#include <time.h>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    setlocale(LC_ALL, "Rus");
+	cout << "Введите размерность массива\n";
+	int k;
+	cin >> k;
+	while (cin.fail() || cin.peek() != '\n' || k != (long long)k || k <= 0) {
+		cin.clear();
+		cin.ignore(99999, '\n');
+		cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+		cin >> k;
+	}
+	int* arr = new int[k];
+	cout << "Введите элементы массива:\n";
+	for (int i = 0; i < k; ++i) {
+		cout << "arr[" << i << "] = ";
+		cin >> arr[i];
+		while (cin.fail() || cin.peek() != '\n' || arr[i] != (long long)arr[i]) {
+			cin.clear();
+			cin.ignore(99999, '\n');
+			cout << "Введены некорректные данные, попробуйте ещё раз:\n" << "arr[" << i << "] = ";
+			cin >> arr[i];
+		}
+	}
+	/*
+	//простой вывод массива
+	cout << "Массив на " << k << " элементов:\n";
+	for (int i = 0; i < k; ++i) {
+		cout << arr[i] << " ";
+	}
+	*/
+	// вывод всез неповторяющихся элементов
+	cout << "Вывод всех неповторяющихся элементов:\n";
+	for (int i = 0; i < k; ++i) {
+
+		int currentValue = arr[i];
+		bool hasEquals = false;
+
+		for (int r = 0; r < k; ++r) {
+			if (i == r) continue;
+			if (currentValue == arr[r] && i != r) hasEquals = true;
+		}
+		if (!hasEquals) {
+			cout << currentValue << " ";
+		}
+	}
+	delete[] arr;
+
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
