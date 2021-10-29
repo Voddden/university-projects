@@ -50,5 +50,6 @@ int main() {
     }
     cout << endl;
 
+    delete[] arr;
     return 0;
 }
