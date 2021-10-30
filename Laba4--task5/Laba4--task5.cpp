@@ -10,9 +10,9 @@ using namespace std;
 
 double average_center(double b, double c, double d, double e);
 double average_right(double c, double d, double e);
-//int isLocalMinimum_top(int a, int b, int d, int e);
-//int isLocalMinimum_left(int a, int b, int c, int e);
-//int isLocalMinimum_bottom(int a, int b, int c, int d);
+double average_top(double b, double d, double e);
+double average_left(double b, double c, double e);
+double average_bottom(double b, double c, double d);
 
 int main() {
     setlocale(LC_ALL, "Rus");
@@ -139,16 +139,128 @@ int main() {
     cout << endl;
     //right-end
 
-    /*
-    for (int i = 1; i < n - 1; ++i) {
-        arr[i][m-1] = average_right(arr[i][m - 1], arr[i - 1][m - 1], arr[i][m - 2], arr[i + 1][m - 1]);
+    //top-start
+
+    int m_top = m - 2;
+    double* arr_top = new double[m_top];
+
+    for (int j = 1; j <= m_top; ++j) {
+        arr_top[j - 1] = arr[0][j];
     }
-    */
+    cout << "\n---arr_top--- изначальный\n";
+    for (int j = 0; j < m_top; ++j) {
+        cout << setw(3) << left << arr_top[j] << " ";
+    }
+    cout << endl << endl;
+
+
+    for (int j = 0; j < m_top; ++j) {
+        arr_top[j] = average_top(arr[0][j + 2], arr[0][j], arr[1][j + 1]);
+    }
+    cout << "---arr_top--- с новыми числами\n";
+    for (int j = 0; j < m_top; ++j) {
+        cout << setw(3) << left << arr_top[j] << " ";
+    }
+    cout << endl << endl;
+    //top-end
+
+
+    //left-start
+
+    int n_left = n - 2;
+    double* arr_left = new double[n_left];
+
+    for (int i = 1; i <= n_left; ++i) {
+        arr_left[i - 1] = arr[i][0];
+    }
+    cout << "---arr_left--- изначальный\n";
+    for (int i = 0; i < n_left; ++i) {
+        cout << setw(3) << left << arr_left[i] << " ";
+    }
+    cout << endl << endl;
+
+    for (int i = 0; i < n_left; ++i) {
+        arr_left[i] = average_left(arr[i + 1][1], arr[i][0], arr[i + 2][0]);
+    }
+    cout << "---arr_left--- с новыми числами\n";
+    for (int i = 0; i < n_left; ++i) {
+        cout << setw(3) << left << arr_left[i] << " ";
+    }
+    cout << endl << endl;
+
+    //left-end
+
+    //bottom-start
+
+    int m_bottom = m - 2;
+    double* arr_bottom = new double[m_bottom];
+
+    for (int j = 1; j <= m_bottom; ++j) {
+        arr_bottom[j - 1] = arr[n - 1][j];
+    }
+    cout << "\n---arr_bottom--- изначальный\n";
+    for (int j = 0; j < m_bottom; ++j) {
+        cout << setw(3) << left << arr_bottom[j] << " ";
+    }
+    cout << endl << endl;
+
+
+    for (int j = 0; j < m_bottom; ++j) {
+        arr_bottom[j] = average_bottom(arr[n - 1][j + 2], arr[n - 2][j + 1], arr[n - 1][j]);
+    }
+    cout << "---arr_bottom--- с новыми числами\n";
+    for (int j = 0; j < m_bottom; ++j) {
+        cout << setw(3) << left << arr_bottom[j] << " ";
+    }
+    cout << endl << endl;
+
+    //bottom-end
+
+    cout << "Сглаженная матрица:\n";
+
+    arr[0][0] = (arr[0][1] + arr[1][0]) / 2; // точка 1
+    arr[0][m - 1] = (arr[0][m - 2] + arr[1][m - 1]) / 2; // точка 2
+    arr[n - 1][0] = (arr[n - 2][0] + arr[n - 1][1]) / 2; // точка 3
+    arr[n - 1][m - 1] = (arr[n - 2][m - 1] + arr[n - 1][m - 2]) / 2; // точка 4
+
+    for (int i = 1; i < m - 1; ++i) { // перенос центральных сглаженных чисел в основной массив
+        for (int j = 1; j < n - 1; ++j) {
+            arr[i][j] = arr_center[i - 1][j - 1];
+        }
+    }
+
+    for (int i = 1; i < n - 1; ++i) { // перенос правых сглаженных чисел в осн. массив
+        arr[i][m - 1] = arr_right[i - 1];
+    }
+
+    for (int j = 1; j < m - 1; ++j) { // перенос верхних сглаженных чисел в осн. массив
+        arr[0][j] = arr_top[j - 1];
+    }
+
+    for (int i = 1; i < n - 1; ++i) { // перенос левых сглаженных чисел в осн. массив
+        arr[i][0] = arr_left[i - 1];
+    }
+
+    for (int j = 1; j < m - 1; ++j) { // перенос нижних сглаженных чисел в осн. массив
+        arr[n - 1][j] = arr_bottom[j - 1];
+    }
+
+
+
+    for (int i = 0; i < n; ++i) { // вывод основного массива на экран
+        for (int j = 0; j < m; ++j) {
+            cout << setw(3) << left << setprecision(3) << arr[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    cout << endl;
     //// конец алгоритма сглаживания
 
-    //cout << "Сглаженная матрица:\n";
-
-
+    delete[] arr_center;
+    delete[] arr_right;
+    delete[] arr_top;
+    delete[] arr_left;
+    delete[] arr_bottom;
     delete[] arr;
     return 0;
 }
@@ -163,31 +275,18 @@ double average_right(double c, double d, double e) {
     double result = (c + d + e) / 3;
     return result;
 }
-/*
-int isLocalMinimum_top(int a, int b, int d, int e) {
-    if (a < b && a < d && a < e) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
+
+double average_top(double b, double d, double e) {
+    double result = (b + d + e) / 3;
+    return result;
 }
 
-int isLocalMinimum_left(int a, int b, int c, int e) {
-    if (a < b && a < c && a < e) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
+double average_left(double b, double c, double e) {
+    double result = (b + c + e) / 3;
+    return result;
 }
 
-int isLocalMinimum_bottom(int a, int b, int c, int d) {
-    if (a < b && a < c && a < d) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
+double average_bottom(double b, double c, double d) {
+    double result = (b + c + d) / 3;
+    return result;
 }
-*/
