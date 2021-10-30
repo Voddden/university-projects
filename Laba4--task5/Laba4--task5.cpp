@@ -42,14 +42,6 @@ int main() {
         arr[i] = new double[m];
     }
 
-    /*
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
-            arr[i][j] = rand() % 10 + 1;
-        }
-    }
-    */
-
     cout << "Введите значения элементов массива\n";
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
@@ -75,6 +67,7 @@ int main() {
     cout << endl;
 
     //// начало алгоритма сглаживания
+    
     //center-start
     int n_center = n - 2;
     int m_center = m - 2;
@@ -88,134 +81,68 @@ int main() {
             arr_center[i-1][j-1] = arr[i][j];
         }
     }
-    //cout << "---arr_center--- изначальный\n";
-    //for (int i = 0; i < n_center; ++i) {
-    //    for (int j = 0; j < m_center; ++j) {
-    //        cout << setw(3) << left << arr_center[i][j] << " ";
-    //    }
-    //    cout << endl;
-    //}
-    //cout << endl;
 
     for (int i = 0; i < n_center; ++i) {
         for (int j = 0; j < m_center; ++j) {
             arr_center[i][j] = average_center(arr[i + 1][j + 2], arr[i][j + 1], arr[i + 1][j], arr[i + 2][j + 1]);
         }
     }
-
-    //cout << "---arr_center--- с новыми числами\n";
-    //for (int i = 0; i < n_center; ++i) {
-    //    for (int j = 0; j < m_center; ++j) {
-    //        cout << setw(3) << left << arr_center[i][j] << " ";
-    //    }
-    //    cout << "\n";
-    //}
-    //cout << endl;
-
     //center-end
 
 
     //right-start
-     
     int n_right = n - 2;
     double* arr_right = new double[n_right];
 
     for (int i = 1; i <= n_right; ++i) {
         arr_right[i - 1] = arr[i][m - 1];
     }
-    //cout << "---arr_right--- изначальный\n";
-    //for (int i = 0; i < n_right; ++i) {
-    //    cout << setw(3) << left << arr_right[i] << " ";
-    //}
-    //cout << endl << endl;
     
     for (int i = 0; i < n_right; ++i) {
         arr_right[i] = average_right(arr[i][m - 1], arr[i + 1][m - 2], arr[i + 2][m - 1]);
     }
-    //cout << "---arr_right--- с новыми числами\n";
-    //for (int i = 0; i < n_right; ++i) {
-    //    cout << setw(3) << left << arr_right[i] << " ";
-    //}
-    //cout << endl;
-    
     //right-end
 
-    //top-start
 
+    //top-start
     int m_top = m - 2;
     double* arr_top = new double[m_top];
 
     for (int j = 1; j <= m_top; ++j) {
         arr_top[j - 1] = arr[0][j];
     }
-    //cout << "\n---arr_top--- изначальный\n";
-    //for (int j = 0; j < m_top; ++j) {
-    //    cout << setw(3) << left << arr_top[j] << " ";
-    //}
-    //cout << endl << endl;
-
 
     for (int j = 0; j < m_top; ++j) {
         arr_top[j] = average_top(arr[0][j + 2], arr[0][j], arr[1][j + 1]);
     }
-    //cout << "---arr_top--- с новыми числами\n";
-    //for (int j = 0; j < m_top; ++j) {
-    //    cout << setw(3) << left << arr_top[j] << " ";
-    //}
-    //cout << endl << endl;
-    
     //top-end
 
 
     //left-start
-
     int n_left = n - 2;
     double* arr_left = new double[n_left];
 
     for (int i = 1; i <= n_left; ++i) {
         arr_left[i - 1] = arr[i][0];
     }
-    //cout << "---arr_left--- изначальный\n";
-    //for (int i = 0; i < n_left; ++i) {
-    //    cout << setw(3) << left << arr_left[i] << " ";
-    //}
-    //cout << endl << endl;
 
     for (int i = 0; i < n_left; ++i) {
         arr_left[i] = average_left(arr[i + 1][1], arr[i][0], arr[i + 2][0]);
     }
-    //cout << "---arr_left--- с новыми числами\n";
-    //for (int i = 0; i < n_left; ++i) {
-    //    cout << setw(3) << left << arr_left[i] << " ";
-    //}
-    //cout << endl << endl;
-
     //left-end
 
-    //bottom-start
 
+    //bottom-start
     int m_bottom = m - 2;
     double* arr_bottom = new double[m_bottom];
 
     for (int j = 1; j <= m_bottom; ++j) {
         arr_bottom[j - 1] = arr[n - 1][j];
     }
-    //cout << "\n---arr_bottom--- изначальный\n";
-    //for (int j = 0; j < m_bottom; ++j) {
-    //    cout << setw(3) << left << arr_bottom[j] << " ";
-    //}
-    //cout << endl << endl;
-
 
     for (int j = 0; j < m_bottom; ++j) {
         arr_bottom[j] = average_bottom(arr[n - 1][j + 2], arr[n - 2][j + 1], arr[n - 1][j]);
     }
-    //cout << "---arr_bottom--- с новыми числами\n";
-    //for (int j = 0; j < m_bottom; ++j) {
-    //    cout << setw(3) << left << arr_bottom[j] << " ";
-    //}
-    //cout << endl << endl;
-
     //bottom-end
 
     cout << "Сглаженная матрица:\n";
@@ -248,7 +175,6 @@ int main() {
     }
 
 
-
     for (int i = 0; i < n; ++i) { // вывод основного массива на экран
         for (int j = 0; j < m; ++j) {
             cout << setw(3) << left << setprecision(3) << arr[i][j] << " ";
@@ -271,7 +197,6 @@ double average_center(double b, double c, double d, double e) {
     double result = (b + c + d + e) / 4;
     return result;
 }
-
 
 double average_right(double c, double d, double e) {
     double result = (c + d + e) / 3;
