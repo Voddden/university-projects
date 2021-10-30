@@ -88,14 +88,14 @@ int main() {
             arr_center[i-1][j-1] = arr[i][j];
         }
     }
-    cout << "---arr_center--- изначальный\n";
-    for (int i = 0; i < n_center; ++i) {
-        for (int j = 0; j < m_center; ++j) {
-            cout << setw(3) << left << arr_center[i][j] << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
+    //cout << "---arr_center--- изначальный\n";
+    //for (int i = 0; i < n_center; ++i) {
+    //    for (int j = 0; j < m_center; ++j) {
+    //        cout << setw(3) << left << arr_center[i][j] << " ";
+    //    }
+    //    cout << endl;
+    //}
+    //cout << endl;
 
     for (int i = 0; i < n_center; ++i) {
         for (int j = 0; j < m_center; ++j) {
@@ -103,14 +103,14 @@ int main() {
         }
     }
 
-    cout << "---arr_center--- с новыми числами\n";
-    for (int i = 0; i < n_center; ++i) {
-        for (int j = 0; j < m_center; ++j) {
-            cout << setw(3) << left << arr_center[i][j] << " ";
-        }
-        cout << "\n";
-    }
-    cout << endl;
+    //cout << "---arr_center--- с новыми числами\n";
+    //for (int i = 0; i < n_center; ++i) {
+    //    for (int j = 0; j < m_center; ++j) {
+    //        cout << setw(3) << left << arr_center[i][j] << " ";
+    //    }
+    //    cout << "\n";
+    //}
+    //cout << endl;
 
     //center-end
 
@@ -123,20 +123,21 @@ int main() {
     for (int i = 1; i <= n_right; ++i) {
         arr_right[i - 1] = arr[i][m - 1];
     }
-    cout << "---arr_right--- изначальный\n";
-    for (int i = 0; i < n_right; ++i) {
-        cout << setw(3) << left << arr_right[i] << " ";
-    }
-    cout << endl << endl;
+    //cout << "---arr_right--- изначальный\n";
+    //for (int i = 0; i < n_right; ++i) {
+    //    cout << setw(3) << left << arr_right[i] << " ";
+    //}
+    //cout << endl << endl;
     
     for (int i = 0; i < n_right; ++i) {
         arr_right[i] = average_right(arr[i][m - 1], arr[i + 1][m - 2], arr[i + 2][m - 1]);
     }
-    cout << "---arr_right--- с новыми числами\n";
-    for (int i = 0; i < n_right; ++i) {
-        cout << setw(3) << left << arr_right[i] << " ";
-    }
-    cout << endl;
+    //cout << "---arr_right--- с новыми числами\n";
+    //for (int i = 0; i < n_right; ++i) {
+    //    cout << setw(3) << left << arr_right[i] << " ";
+    //}
+    //cout << endl;
+    
     //right-end
 
     //top-start
@@ -147,21 +148,22 @@ int main() {
     for (int j = 1; j <= m_top; ++j) {
         arr_top[j - 1] = arr[0][j];
     }
-    cout << "\n---arr_top--- изначальный\n";
-    for (int j = 0; j < m_top; ++j) {
-        cout << setw(3) << left << arr_top[j] << " ";
-    }
-    cout << endl << endl;
+    //cout << "\n---arr_top--- изначальный\n";
+    //for (int j = 0; j < m_top; ++j) {
+    //    cout << setw(3) << left << arr_top[j] << " ";
+    //}
+    //cout << endl << endl;
 
 
     for (int j = 0; j < m_top; ++j) {
         arr_top[j] = average_top(arr[0][j + 2], arr[0][j], arr[1][j + 1]);
     }
-    cout << "---arr_top--- с новыми числами\n";
-    for (int j = 0; j < m_top; ++j) {
-        cout << setw(3) << left << arr_top[j] << " ";
-    }
-    cout << endl << endl;
+    //cout << "---arr_top--- с новыми числами\n";
+    //for (int j = 0; j < m_top; ++j) {
+    //    cout << setw(3) << left << arr_top[j] << " ";
+    //}
+    //cout << endl << endl;
+    
     //top-end
 
 
@@ -173,20 +175,20 @@ int main() {
     for (int i = 1; i <= n_left; ++i) {
         arr_left[i - 1] = arr[i][0];
     }
-    cout << "---arr_left--- изначальный\n";
-    for (int i = 0; i < n_left; ++i) {
-        cout << setw(3) << left << arr_left[i] << " ";
-    }
-    cout << endl << endl;
+    //cout << "---arr_left--- изначальный\n";
+    //for (int i = 0; i < n_left; ++i) {
+    //    cout << setw(3) << left << arr_left[i] << " ";
+    //}
+    //cout << endl << endl;
 
     for (int i = 0; i < n_left; ++i) {
         arr_left[i] = average_left(arr[i + 1][1], arr[i][0], arr[i + 2][0]);
     }
-    cout << "---arr_left--- с новыми числами\n";
-    for (int i = 0; i < n_left; ++i) {
-        cout << setw(3) << left << arr_left[i] << " ";
-    }
-    cout << endl << endl;
+    //cout << "---arr_left--- с новыми числами\n";
+    //for (int i = 0; i < n_left; ++i) {
+    //    cout << setw(3) << left << arr_left[i] << " ";
+    //}
+    //cout << endl << endl;
 
     //left-end
 
@@ -198,21 +200,21 @@ int main() {
     for (int j = 1; j <= m_bottom; ++j) {
         arr_bottom[j - 1] = arr[n - 1][j];
     }
-    cout << "\n---arr_bottom--- изначальный\n";
-    for (int j = 0; j < m_bottom; ++j) {
-        cout << setw(3) << left << arr_bottom[j] << " ";
-    }
-    cout << endl << endl;
+    //cout << "\n---arr_bottom--- изначальный\n";
+    //for (int j = 0; j < m_bottom; ++j) {
+    //    cout << setw(3) << left << arr_bottom[j] << " ";
+    //}
+    //cout << endl << endl;
 
 
     for (int j = 0; j < m_bottom; ++j) {
         arr_bottom[j] = average_bottom(arr[n - 1][j + 2], arr[n - 2][j + 1], arr[n - 1][j]);
     }
-    cout << "---arr_bottom--- с новыми числами\n";
-    for (int j = 0; j < m_bottom; ++j) {
-        cout << setw(3) << left << arr_bottom[j] << " ";
-    }
-    cout << endl << endl;
+    //cout << "---arr_bottom--- с новыми числами\n";
+    //for (int j = 0; j < m_bottom; ++j) {
+    //    cout << setw(3) << left << arr_bottom[j] << " ";
+    //}
+    //cout << endl << endl;
 
     //bottom-end
 
