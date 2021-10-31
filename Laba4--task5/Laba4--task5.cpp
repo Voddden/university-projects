@@ -1,7 +1,7 @@
 ﻿//Лабораторная 4, задача 5 Выполнена: Воднев Д. И.
 
 /*
-    
+    Построить результат сглаживания заданной вещественной матрицы.
 */
 
 using namespace std;
@@ -37,6 +37,11 @@ int main() {
         cin >> m;
     }
 
+    if (n == 1 && m == 1) {
+        cout << "Матрицы размерностью 1x1 не существует\n";
+        return 0;
+    }
+
     double** arr = new double* [n];
     for (int i = 0; i < n; ++i) {
         arr[i] = new double[m];
@@ -60,145 +65,176 @@ int main() {
     cout << endl << "Изначальная матрица:" << endl;
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
-            cout << setw(3) << left << arr[i][j] << " ";
+            cout << setw(6) << setprecision(4) << left << arr[i][j] << " ";
         }
         cout << "\n";
     }
     cout << endl;
 
-    //// начало алгоритма сглаживания
-    
-    //center-start
-    int n_center = n - 2;
-    int m_center = m - 2;
-    double** arr_center = new double* [n_center];
-    for (int i = 0; i < n_center; ++i) {
-        arr_center[i] = new double[m_center];
-    }
-
-    for (int i = 1; i <= n_center; ++i) {
-        for (int j = 1; j <= m_center; ++j) {
-            arr_center[i-1][j-1] = arr[i][j];
+    if (n == 1 && m != 1) { // вектор-строка
+        int m_string = m - 2;
+        double* arr_string = new double[m_string];
+        for (int j = 0; j < m_string; ++j) {
+            arr_string[j] = (arr[0][j] + arr[0][j + 2]) / 2;
         }
-    }
 
-    for (int i = 0; i < n_center; ++i) {
-        for (int j = 0; j < m_center; ++j) {
-            arr_center[i][j] = average_center(arr[i + 1][j + 2], arr[i][j + 1], arr[i + 1][j], arr[i + 2][j + 1]);
+        for (int j = 1; j < m - 1; ++j) {
+            arr[0][j] = arr_string[j - 1];
         }
-    }
-    //center-end
 
-
-    //right-start
-    int n_right = n - 2;
-    double* arr_right = new double[n_right];
-
-    for (int i = 1; i <= n_right; ++i) {
-        arr_right[i - 1] = arr[i][m - 1];
-    }
-    
-    for (int i = 0; i < n_right; ++i) {
-        arr_right[i] = average_right(arr[i][m - 1], arr[i + 1][m - 2], arr[i + 2][m - 1]);
-    }
-    //right-end
-
-
-    //top-start
-    int m_top = m - 2;
-    double* arr_top = new double[m_top];
-
-    for (int j = 1; j <= m_top; ++j) {
-        arr_top[j - 1] = arr[0][j];
-    }
-
-    for (int j = 0; j < m_top; ++j) {
-        arr_top[j] = average_top(arr[0][j + 2], arr[0][j], arr[1][j + 1]);
-    }
-    //top-end
-
-
-    //left-start
-    int n_left = n - 2;
-    double* arr_left = new double[n_left];
-
-    for (int i = 1; i <= n_left; ++i) {
-        arr_left[i - 1] = arr[i][0];
-    }
-
-    for (int i = 0; i < n_left; ++i) {
-        arr_left[i] = average_left(arr[i + 1][1], arr[i][0], arr[i + 2][0]);
-    }
-    //left-end
-
-
-    //bottom-start
-    int m_bottom = m - 2;
-    double* arr_bottom = new double[m_bottom];
-
-    for (int j = 1; j <= m_bottom; ++j) {
-        arr_bottom[j - 1] = arr[n - 1][j];
-    }
-
-    for (int j = 0; j < m_bottom; ++j) {
-        arr_bottom[j] = average_bottom(arr[n - 1][j + 2], arr[n - 2][j + 1], arr[n - 1][j]);
-    }
-    //bottom-end
-
-    cout << "Сглаженная матрица:\n";
-
-    //arr[0][0] = (arr[0][1] + arr[1][0]) / 2; // точка 1
-    //arr[0][m - 1] = (arr[0][m - 2] + arr[1][m - 1]) / 2; // точка 2
-    //arr[n - 1][0] = (arr[n - 2][0] + arr[n - 1][1]) / 2; // точка 3
-    //arr[n - 1][m - 1] = (arr[n - 2][m - 1] + arr[n - 1][m - 2]) / 2; // точка 4
-
-    double dot1 = (arr[0][1] + arr[1][0]) / 2;
-    double dot2 = (arr[0][m - 2] + arr[1][m - 1]) / 2;
-    double dot3 = (arr[n - 2][0] + arr[n - 1][1]) / 2;
-    double dot4 = (arr[n - 2][m - 1] + arr[n - 1][m - 2]) / 2;
-
-    for (int i = 1; i < m - 1; ++i) { // перенос центральных сглаженных чисел в основной массив
-        for (int j = 1; j < n - 1; ++j) {
-            arr[i][j] = arr_center[i - 1][j - 1];
+        cout << "Сглаженная матрица:\n";
+        for (int j = 0; j < m; ++j) { // вывод основного массива на экран
+            cout << setw(6) << left << setprecision(3) << arr[0][j];
         }
+        cout << endl;
     }
-
-    for (int i = 1; i < n - 1; ++i) { // перенос правых сглаженных чисел в осн. массив
-        arr[i][m - 1] = arr_right[i - 1];
-    }
-
-    for (int j = 1; j < m - 1; ++j) { // перенос верхних сглаженных чисел в осн. массив
-        arr[0][j] = arr_top[j - 1];
-    }
-
-    for (int i = 1; i < n - 1; ++i) { // перенос левых сглаженных чисел в осн. массив
-        arr[i][0] = arr_left[i - 1];
-    }
-
-    for (int j = 1; j < m - 1; ++j) { // перенос нижних сглаженных чисел в осн. массив
-        arr[n - 1][j] = arr_bottom[j - 1];
-    }
-
-    arr[0][0] = dot1;
-    arr[0][m - 1] = dot2;
-    arr[n - 1][0] = dot3;
-    arr[n - 1][m - 1] = dot4;
-
-    for (int i = 0; i < n; ++i) { // вывод основного массива на экран
-        for (int j = 0; j < m; ++j) {
-            cout << setw(3) << left << setprecision(3) << arr[i][j] << " ";
+    else if (n != 1 && m == 1) { // вектор-столбец
+        int n_row = n - 2;
+        double* arr_row = new double[n_row];
+        for (int i = 0; i < n_row; ++i) {
+            arr_row[i] = (arr[i][0] + arr[i + 2][0]) / 2;
         }
-        cout << "\n";
-    }
-    cout << endl;
-    //// конец алгоритма сглаживания
+        
+        for (int i = 1; i < n - 1; ++i) {
+            arr[i][0] = arr_row[i - 1];
+        }
 
-    delete[] arr_center;
-    delete[] arr_right;
-    delete[] arr_top;
-    delete[] arr_left;
-    delete[] arr_bottom;
-    delete[] arr;
+        cout << "Сглаженная матрица:\n";
+        for (int i = 0; i < n; ++i) { // вывод основного массива на экран
+            cout << left << setprecision(3) << arr[i][0] << endl;
+        }
+        cout << endl;
+    }
+    else { // матрицы 2х2 и выше
+        //// начало алгоритма сглаживания
+
+        //center-start
+        int n_center = n - 2;
+        int m_center = m - 2;
+        double** arr_center = new double* [n_center];
+        for (int i = 0; i < n_center; ++i) {
+            arr_center[i] = new double[m_center];
+        }
+
+        for (int i = 1; i <= n_center; ++i) {
+            for (int j = 1; j <= m_center; ++j) {
+                arr_center[i - 1][j - 1] = arr[i][j];
+            }
+        }
+
+        for (int i = 0; i < n_center; ++i) {
+            for (int j = 0; j < m_center; ++j) {
+                arr_center[i][j] = average_center(arr[i + 1][j + 2], arr[i][j + 1], arr[i + 1][j], arr[i + 2][j + 1]);
+            }
+        }
+        //center-end
+
+
+        //right-start
+        int n_right = n - 2;
+        double* arr_right = new double[n_right];
+
+        for (int i = 1; i <= n_right; ++i) {
+            arr_right[i - 1] = arr[i][m - 1];
+        }
+
+        for (int i = 0; i < n_right; ++i) {
+            arr_right[i] = average_right(arr[i][m - 1], arr[i + 1][m - 2], arr[i + 2][m - 1]);
+        }
+        //right-end
+
+
+        //top-start
+        int m_top = m - 2;
+        double* arr_top = new double[m_top];
+
+        for (int j = 1; j <= m_top; ++j) {
+            arr_top[j - 1] = arr[0][j];
+        }
+
+        for (int j = 0; j < m_top; ++j) {
+            arr_top[j] = average_top(arr[0][j + 2], arr[0][j], arr[1][j + 1]);
+        }
+        //top-end
+
+
+        //left-start
+        int n_left = n - 2;
+        double* arr_left = new double[n_left];
+
+        for (int i = 1; i <= n_left; ++i) {
+            arr_left[i - 1] = arr[i][0];
+        }
+
+        for (int i = 0; i < n_left; ++i) {
+            arr_left[i] = average_left(arr[i + 1][1], arr[i][0], arr[i + 2][0]);
+        }
+        //left-end
+
+
+        //bottom-start
+        int m_bottom = m - 2;
+        double* arr_bottom = new double[m_bottom];
+
+        for (int j = 1; j <= m_bottom; ++j) {
+            arr_bottom[j - 1] = arr[n - 1][j];
+        }
+
+        for (int j = 0; j < m_bottom; ++j) {
+            arr_bottom[j] = average_bottom(arr[n - 1][j + 2], arr[n - 2][j + 1], arr[n - 1][j]);
+        }
+        //bottom-end
+
+        cout << "Сглаженная матрица:\n";
+
+        double dot1 = (arr[0][1] + arr[1][0]) / 2;
+        double dot2 = (arr[0][m - 2] + arr[1][m - 1]) / 2;
+        double dot3 = (arr[n - 2][0] + arr[n - 1][1]) / 2;
+        double dot4 = (arr[n - 2][m - 1] + arr[n - 1][m - 2]) / 2;
+
+        for (int i = 1; i < m - 1; ++i) { // перенос центральных сглаженных чисел в основной массив
+            for (int j = 1; j < n - 1; ++j) {
+                arr[i][j] = arr_center[i - 1][j - 1];
+            }
+        }
+
+        for (int i = 1; i < n - 1; ++i) { // перенос правых сглаженных чисел в осн. массив
+            arr[i][m - 1] = arr_right[i - 1];
+        }
+
+        for (int j = 1; j < m - 1; ++j) { // перенос верхних сглаженных чисел в осн. массив
+            arr[0][j] = arr_top[j - 1];
+        }
+
+        for (int i = 1; i < n - 1; ++i) { // перенос левых сглаженных чисел в осн. массив
+            arr[i][0] = arr_left[i - 1];
+        }
+
+        for (int j = 1; j < m - 1; ++j) { // перенос нижних сглаженных чисел в осн. массив
+            arr[n - 1][j] = arr_bottom[j - 1];
+        }
+
+        arr[0][0] = dot1;
+        arr[0][m - 1] = dot2;
+        arr[n - 1][0] = dot3;
+        arr[n - 1][m - 1] = dot4;
+
+        for (int i = 0; i < n; ++i) { // вывод основного массива на экран
+            for (int j = 0; j < m; ++j) {
+                cout << setw(6) << left << setprecision(3) << arr[i][j] << " ";
+            }
+            cout << "\n";
+        }
+        cout << endl;
+        delete[] arr_center;
+        delete[] arr_right;
+        delete[] arr_top;
+        delete[] arr_left;
+        delete[] arr_bottom;
+        delete[] arr;
+        //// конец алгоритма сглаживания
+    }
+
     return 0;
 }
 
