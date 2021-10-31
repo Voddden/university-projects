@@ -1,20 +1,58 @@
-﻿// Laba4--task7.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿//Лабораторная 4, задача 7 Выполнена: Воднев Д. И.
 
+/*
+    Дано натуральное число n. Требуется подсчитать количество цифр
+числа и определить, какая цифра стоит в разряде с номером i (разряды
+нумеруются с конца, т.е. разряд единиц имеет номер 0).
+*/
+
+using namespace std;
 #include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+long long power(long long x, long long c) {
+    if (c == 0) {
+        return 1;
+    }
+    else {
+        return x *= power(x, --c);
+    }
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+int main() {
+    setlocale(LC_ALL, "Rus");
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+    cout << "Введите число n:\n";
+    long long n;
+    cin >> n;
+    while (cin.fail() || cin.peek() != '\n' || n != (long long)n || n <= 0) {
+        cin.clear();
+        cin.ignore(99999, '\n');
+        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+        cin >> n;
+    }
+
+    long long k = 1; 
+    while (n - n % power(10, k) != 0) ++k;
+    // k == количество цифр в числе n
+    long long* arr = new long long[k]; // массив цифр числа n
+
+    for (long long i = 0; i < k; ++i) {
+        arr[i] = n % 10;
+        n /= 10;
+    }
+    cout << "Количество цифр в числе: " << k << endl;
+
+    cout << "Введите разряд i:\n";
+    long long i;
+    cin >> i;
+    while (cin.fail() || cin.peek() != '\n' || i != (long long)i || i < 0 || i > k - 1) {
+        cin.clear();
+        cin.ignore(99999, '\n');
+        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+        cin >> i;
+    }
+    cout << "В этом разряде стоит цифра " << arr[i] << endl;
+    
+    delete[] arr;
+    return 0;
+}
