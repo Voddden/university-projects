@@ -1,20 +1,107 @@
-﻿// Laba4--task6.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿//Лабораторная 4, задача 6 Выполнена: Воднев Д. И.
 
+/*
+    Для заданной матрицы А размерности N*M построить матрицу В такого же размера, 
+    элементы которой обладают следующим свойством: 
+    элемент B[i,j] равен максимальному из элементов матрицы А, 
+    расположенных левее и выше позиции (і,j), включая позицию (і,ј). 
+    При этом считается, что позиция(1,1) - верхняя левая позиция матрицы
+*/
+
+using namespace std;
 #include <iostream>
+#include <iomanip>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    setlocale(LC_ALL, "Rus");
+    srand(time(NULL));
+    int n, m;    
+    cout << "Введите кол-во строк матрицы A\n";
+    cin >> n;
+    while (cin.fail() || cin.peek() != '\n' || n != (long long)n || n <= 0) {
+        cin.clear();
+        cin.ignore(99999, '\n');
+        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+        cin >> n;
+    }
+    cout << "Введите кол-во столбцов матрицы A\n";
+    cin >> m;
+    while (cin.fail() || cin.peek() != '\n' || m != (long long)m || m <= 0) {
+        cin.clear();
+        cin.ignore(99999, '\n');
+        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+        cin >> m;
+    }
+    int** arr = new int* [n];
+    for (int i = 0; i < n; ++i) {
+        arr[i] = new int[m];
+    }
+
+    cout << "Введите значения элементов матрицы А\n";
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            cout << "A" << "(" << i + 1 << ";" << j + 1 << ") = ";
+            cin >> arr[i][j];
+            while (cin.fail() || cin.peek() != '\n') {
+                cin.clear();
+                cin.ignore(99999, '\n');
+                cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+                cout << "A" << "(" << i + 1 << ";" << j + 1 << ") = ";
+                cin >> arr[i][j];
+            }
+        }
+    }
+
+    cout << "Матрица А:\n"; // изначальная матрица
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            cout << setw(8) << left << arr[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    // начало создания матрицы В
+
+    int** arr_temp = new int* [n];
+    for (int i = 0; i < n; ++i) {
+        arr_temp[i] = new int[m];
+    }
+
+    int max_number, x, y;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            x = i;
+            y = j;
+            max_number = 0;
+            for (int i = 0; i <= x; ++i) {
+                for (int j = 0; j <= y; ++j) {
+                    if (arr[i][j] > max_number) {
+                        max_number = arr[i][j];
+                    }
+                }
+            }
+            arr_temp[i][j] = max_number;
+        }
+    }
+    // конец создания матрицы В
+
+    cout << "Матрица В:\n";
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            cout << setw(8) << left << arr_temp[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+    // освобождение памяти
+    for (int i = 0; i < n; ++i) {
+        delete[] arr[i];
+    }
+    delete[] arr;
+
+    for (int i = 0; i < n; ++i) {
+        delete[] arr_temp[i];
+    }
+    delete[] arr_temp;
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
