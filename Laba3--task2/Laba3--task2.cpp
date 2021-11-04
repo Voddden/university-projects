@@ -16,7 +16,7 @@ int main() {
         d = 1. / pow(2, n) + 1. / pow(3, n);
         sum += d;
         ++n;
-    } while (d >= 0.001);
+    } while (d >= 0.0000001);
     cout << "Ответ:\n" << sum << endl;
     return 0;
 }
