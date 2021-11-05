@@ -72,6 +72,9 @@ int main() {
     cout << endl;
 
     if (n == 1 && m != 1) { // вектор-строка
+        double dot_string1 = arr[0][1];
+        double dot_string2 = arr[0][m - 2];
+
         int m_string = m - 2;
         double* arr_string = new double[m_string];
         for (int j = 0; j < m_string; ++j) {
@@ -81,6 +84,9 @@ int main() {
         for (int j = 1; j < m - 1; ++j) {
             arr[0][j] = arr_string[j - 1];
         }
+
+        arr[0][0] = dot_string1;
+        arr[0][m - 1] = dot_string2;
 
         cout << "Сглаженная матрица:\n";
         for (int j = 0; j < m; ++j) { // вывод основного массива на экран
