@@ -15,12 +15,10 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Rus");
-    srand(time(NULL));
-
+    srand(time(0));
     cout << "Массив заполняется случайными различными целыми элементами на промежутке [0;n)\n";
-
     cout << "---Введите количество элементов в массиве\n";
-    int n;
+    long long n;
     cin >> n;
     while (cin.fail() || cin.peek() != '\n' || n != (long long)n || n <= 0) {
         cin.clear();
@@ -28,27 +26,21 @@ int main() {
         cout << "Введены некорректные данные, попробуйте ещё раз:\n";
         cin >> n;
     }
-
     long long buff, j, mini = -1, maxi = -1, min = n + 1, max = -1, k = 0;
-
     int* arr = new int[n];
-
     for (int i = 0; i < n; ++i) {
         arr[i] = i;
     }
-
     for (int i = 0; i < n; ++i) {
         j = rand() % n;
         buff = arr[j];
         arr[j] = arr[i];
         arr[i] = buff;
     }
-
     cout << "\nИзначальный массив:\n";
     for (int i = 0; i < n; i++) {
         cout << arr[i] << "  ";
     }
-
     for (int i = 0; i < n; ++i) {
         if (arr[i] > max) {
             maxi = i;
@@ -59,7 +51,6 @@ int main() {
             min = arr[i];
         }
     }
-
     if (mini < maxi) {
         for (int i = mini + 1; i < maxi; ++i) {
             arr[i] = 0;
@@ -72,7 +63,6 @@ int main() {
             ++k;
         }
     }
-
     if (k + 1 > n / 2) {
         if (mini < maxi) {
             for (int i = mini; i < maxi; ++i) {
@@ -87,7 +77,6 @@ int main() {
             }
         }
     }
-
     cout << "\n\nПреобразованный массив:\n";
     for (int i = 0; i < n; i++) {
         cout << arr[i] << "  ";
