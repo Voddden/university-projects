@@ -10,6 +10,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Rus");
+    cout << "Привет!\n";
 
     double N = 0, a, b;
     int i = 1;
