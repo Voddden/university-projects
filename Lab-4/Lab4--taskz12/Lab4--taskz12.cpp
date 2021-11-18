@@ -1,20 +1,62 @@
-﻿// Lab4--taskz12.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿// Лабораторная 4, задача 12. Выполнена: Воднев Д. И.
 
+/*
+Написать функцию, которая будет удалять дубликаты элементов из массива.
+Входные параметры: массив, длина массива. Выходные параметры: новый массив, новый размер.
+*/
+
+using namespace std;
 #include <iostream>
+#include <iomanip>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+// функция удаления дубликатов и вывода нового массива
+void deleteDuplicate(int n, double* arr) {
+    for (int i = 1; i < n; ++i) {
+        for (int j = i - 1; j > -1; --j) {
+            if (arr[i] == arr[j]) {
+                for (int z = i; z < n - 1; ++z) {
+                    arr[z] = arr[z + 1];
+                }
+                --n;
+                --i;
+                break;
+            }
+        }
+    }
+    cout << "\n\nПреобразованный массив:\n\n";
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << "  ";
+    }
+    cout << "\n\nРазмер преобразованного массива: " << n << endl;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu2
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+int main() {
+    setlocale(LC_ALL, "ru");
+    int n;
+    cout << "Программа удаляет дубликаты элементов из заданного массива\n";
+    cout << "Введите размер массива\n";
+    cin >> n;
+    while (cin.fail() || cin.peek() != '\n' || n != (long long)n || n <= 0) {
+        cin.clear();
+        cin.ignore(99999, '\n');
+        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+        cin >> n;
+    }
+    double* arr = new double[n];
+    cout << "Введите элементы массива\n";
+    for (int i = 0; i < n; ++i) {
+        cout << "arr[" << i << "] = ";
+        cin >> arr[i];
+        while (cin.fail() || cin.peek() != '\n' || arr[i] != (long long)arr[i]) {
+            cin.clear();
+            cin.ignore(99999, '\n');
+            cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+            cout << "arr[" << i << "] = ";
+            cin >> arr[i];
+        }
+    }
+    deleteDuplicate(n, arr);
+    // освобождение памяти
+    delete[] arr;
+    return 0;
+}
