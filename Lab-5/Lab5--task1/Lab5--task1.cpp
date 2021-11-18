@@ -8,8 +8,8 @@ int main()
     std::cout << "Hello World!\n";
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+// Run program: Ctrl + F5 or Debugш > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menuл
 
 // Tips for Getting Started: 
 //   1. Use the Solution Explorer window to add/manage files
