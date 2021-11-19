@@ -1,8 +1,8 @@
-﻿// Лабораторная 4, задача 10. Выполнена: Воднев Д. И.
+﻿// Лабораторная 4, задача 10 Выполнена: Воднев Д. И.
 
-/*
-Построить магический квадрат любого порядка, используя любой алгоритм.
-Выделение памяти через функции языка С. 
+/* 
+Построить магический квадрат любого порядка
+Выделение памяти через функции языка С
 */
 
 using namespace std;
@@ -11,6 +11,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "ru");
+
     int n, i, j, m = 1, t, y, x, buff;
     cout << "Программа строит магический квадрат заданного порядка\n";
     cout << "Введите порядок магического квадрата\n";
@@ -21,22 +22,24 @@ int main() {
         cout << "Введены некорректные данные, попробуйте ещё раз:\n";
         cin >> n;
     }
+
     int** magicSquare;
     magicSquare = (int**)calloc(n, sizeof(*magicSquare));
     for (int i = 0; i < n; ++i) {
         magicSquare[i] = (int*)calloc(n, sizeof(*magicSquare[i]));
     }
     if (n == 2) {
-        cout << "Магического квадрата с такой размерностью не существует\n";
+        cout << "\nМагического квадрата не существует\n";
     }
     else if (n == 1) {
         cout << "\nМагический квадрат:\n\n" << setw(3) << 1 << '\n';
     }
-    else if (n % 2 == 1) {
+    else if (n % 2 == 1) { // n - нечетное
         i = 0;
         j = static_cast<int>(n / 2); // Высчитывание среднего элемента
+
         magicSquare[i][j] = 1; // Средний элемент верхней строки равен 1
-        // Заполнение магического квадрата
+        // Заполнение маг. квадрата
         for (int k = 2; k < n * n + 1; ++k) {
             if (i - 1 >= 0 && j - 1 >= 0 && magicSquare[i - 1][j - 1] == 0) {
                 magicSquare[i - 1][j - 1] = k;
@@ -65,10 +68,13 @@ int main() {
     }
     else if (n % 4 == 0) {
         int** secondarySquare;
+
         secondarySquare = (int**)malloc(n * sizeof(int*));
+
         for (long long int i = 0; i < n; ++i) {
             secondarySquare[i] = (int*)malloc(n * sizeof(int));
         }
+
         // Заполнение от 0 до n^2 магического квадрата
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < n; ++j) {
@@ -76,6 +82,7 @@ int main() {
                 ++m;
             }
         }
+
         m = n * n;
         // Заполнение вспомогательного квадрата
         for (int i = 0; i < n; ++i) {
@@ -84,28 +91,36 @@ int main() {
                 --m;
             }
         }
+
         // Длина одного маленького квадрата
         m = (n / 4) * (n / 4);
+
         t = 1;
         i = 0;
         j = 0;
-        // Перестановка элементов из вспомогательного квадрата в магический по диагоналям
+
+        // Перестановка элементов из вспомогательного в магический квадрат по диагоналям
         while (t < m + 1) {
             ++t;
+
             y = i;
             x = j;
+
             while (y < i + 4) {
                 magicSquare[y][x] = secondarySquare[y][x];
                 ++y;
                 ++x;
             }
+
             y = i + 3;
             x = j;
+
             while (x < i + 4) {
                 magicSquare[y][x] = secondarySquare[y][x];
                 --y;
                 ++x;
             }
+
             if (j + 4 < n) {
                 j += 4;
             }
@@ -114,10 +129,12 @@ int main() {
                 i += 4;
             }
         }
+
         for (long long int i = 0; i < n; ++i) {
             free(secondarySquare[i]);
         }
         free(secondarySquare);
+
     }
     else {
         int length4 = n / 2;
@@ -129,7 +146,6 @@ int main() {
         _arr3 = (int**)calloc(length4, sizeof(*_arr3));
         int** _arr4;
         _arr4 = (int**)calloc(length4, sizeof(*_arr4));
-
         for (int i = 0; i < length4; ++i) {
             _arr1[i] = (int*)calloc(length4, sizeof(*_arr1[i]));
         }
@@ -142,6 +158,7 @@ int main() {
         for (int i = 0; i < length4; ++i) {
             _arr4[i] = (int*)calloc(length4, sizeof(*_arr4[i]));
         }
+
         // Высчитывание максимальных значений в маленьких квадратах
         int pred1 = n * n / 4;
         int pred2 = n * n / 2;
@@ -152,7 +169,7 @@ int main() {
         j = static_cast<int>(length4 / 2);
         _arr1[i][j] = 1;
         ++k;
-        // иницализация 1-го маленького квадрата
+        // Заполнение 1-го маленького квадрата
         while (k < pred1 + 1) {
             if (i - 1 > -1 && j - 1 > -1 && _arr1[i - 1][j - 1] == 0) {
                 _arr1[i - 1][j - 1] = k;
@@ -183,7 +200,7 @@ int main() {
         j = static_cast<int>(length4 / 2);
         _arr4[i][j] = k;
         ++k;
-        // инициализация 2-го маленького квадрата
+        // Заполнение 4-го маленького квадрата
         while (k < pred2 + 1) {
             if (i - 1 > -1 && j - 1 >= 0 && _arr4[i - 1][j - 1] == 0) {
                 _arr4[i - 1][j - 1] = k;
@@ -208,13 +225,14 @@ int main() {
                 _arr4[i + 1][j] = k;
                 ++i;
             }
+
             ++k;
         }
         i = 0;
         j = static_cast<int>(length4 / 2);
         _arr2[i][j] = k;
         ++k;
-        // инициализация 2-го маленького квадрата
+        // Заполнение 2-го маленького квадрата
         while (k < pred3 + 1) {
             if (i - 1 >= 0 && j - 1 >= 0 && _arr2[i - 1][j - 1] == 0) {
                 _arr2[i - 1][j - 1] = k;
@@ -245,7 +263,7 @@ int main() {
         j = static_cast<int>(length4 / 2);
         _arr3[i][j] = k;
         ++k;
-        // инициализация 3-го маленького квадрата
+        // Заполнение магического третьего маленького квадрата
         while (k < pred4 + 1) {
             if (i - 1 >= 0 && j - 1 >= 0 && _arr3[i - 1][j - 1] == 0) {
                 _arr3[i - 1][j - 1] = k;
@@ -272,23 +290,23 @@ int main() {
             }
             ++k;
         }
-        // Меняются местами два крайних числа слева
+        // Меняем местами два крайних слева числа
         buff = _arr1[0][0];
         _arr1[0][0] = _arr3[0][0];
         _arr3[0][0] = buff;
-        // Отсчёт со второй строки
-        y = 1;
-        // Замена на втором столбике
+        buff = _arr1[length4 - 1][0];
+        _arr1[length4 - 1][0] = _arr3[length4 - 1][0];
+        _arr3[length4 - 1][0] = buff;
+        y = 1; // Отсчёт со второй строки
+        // Замена в втором столбце
         while (y < length4 - 1) {
             buff = _arr1[y][1];
             _arr1[y][1] = _arr3[y][1];
             _arr3[y][1] = buff;
             ++y;
         }
-        // Расчёт сколько столбиков сдвинется
-        k = (n - 2) / 4 - 1; 
-        // Сдвигание столбиков
-        if (k > 0) {
+        k = (n - 2) / 4 - 1; // (сколько надо столбиков сдвинуть)
+        if (k > 0) { // Сдвиг столбиков
             while (k > 0) {
                 for (int i = 0; i < length4; ++i) {
                     buff = _arr1[i][length4 - k];
@@ -301,7 +319,7 @@ int main() {
                 --k;
             }
         }
-        // Из маленьких 4-х квадратов собирается сам магический квадрат
+        // Сборка маг. квадрата из четырёх маленьких
         for (int i = 0; i < length4; ++i) {
             for (int j = 0; j < length4; ++j) {
                 magicSquare[i][j] = _arr1[i][j];
@@ -311,24 +329,24 @@ int main() {
             }
         }
         // освобождение памяти
-        for (long long int i = 0; i < n; ++i) {
+        for (long long int i = 0; i < length4; ++i) {
             free(_arr1[i]);
         }
         free(_arr1);
-        for (long long int i = 0; i < n; ++i) {
+        for (long long int i = 0; i < length4; ++i) {
             free(_arr2[i]);
         }
         free(_arr2);
-        for (long long int i = 0; i < n; ++i) {
+        for (long long int i = 0; i < length4; ++i) {
             free(_arr3[i]);
         }
         free(_arr3);
-        for (long long int i = 0; i < n; ++i) {
+        for (long long int i = 0; i < length4; ++i) {
             free(_arr4[i]);
         }
         free(_arr4);
     }
-    // Вывод квадрата
+    // Вывод квадрата на экран
     if (n > 2) {
         cout << "\nМагический квадрат:\n\n";
         for (int i = 0; i < n; ++i) {
@@ -340,12 +358,11 @@ int main() {
                     cout << setw(10) << magicSquare[i][j] << " ";
                 }
             }
-            cout << endl;
+            cout << "\n";
         }
     }
     for (long long int i = 0; i < n; ++i) {
         free(magicSquare[i]);
     }
     free(magicSquare);
-    return 0;
 }
