@@ -14,6 +14,8 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Rus");
     ios_base::sync_with_stdio(0);
+    cout << "Программа определяет диагональ 3-мерного массива с наибольшей суммой чисел\n";
+
     long long size;
     long double diag1 = 0, diag2 = 0, diag3 = 0, diag4 = 0, max1 = 0, max2 = 0, max = 0;
     cout << "Введите размерность массива\n";
@@ -63,7 +65,7 @@ int main() {
     max1 = (diag1 > diag2) ? diag1 : diag2;
     max2 = (diag3 > diag4) ? diag3 : diag4;
     max = (max1 > max2) ? max1 : max2;
-    cout << "Диагональ с наибольшей суммой чисел:\n";
+    cout << "Сумма чисел на наибольшей диагонали:\n";
     cout << max << endl;
     return 0;
 }

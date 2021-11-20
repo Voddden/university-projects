@@ -51,7 +51,7 @@ int main() {
     arrB = (int**)malloc(n * sizeof(int*));
     arrAB = (int**)malloc(m * sizeof(int*));
     for (long long int i = 0; i < m; ++i) {
-        arrB[i] = (int*)malloc(n * sizeof(int));
+        arrA[i] = (int*)malloc(n * sizeof(int));
     }
     for (long long int i = 0; i < n; ++i) {
         arrB[i] = (int*)malloc(k * sizeof(int));
@@ -124,7 +124,7 @@ int main() {
         }
         cout << endl;
     }
-
+    // освобождение памяти
     for (int i = 0; i < m; ++i) {
         free(arrA[i]);
     }

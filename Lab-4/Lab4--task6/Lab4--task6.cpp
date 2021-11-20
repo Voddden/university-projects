@@ -15,6 +15,7 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Rus");
     srand(time(NULL));
+
     int n, m;
     cout << "Введите кол-во строк матрицы A\n";
     cin >> n;

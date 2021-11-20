@@ -55,7 +55,7 @@ int main() {
 			cout << currentValue << " ";
 		}
 	}
-	delete[] arr;
+	//delete[] arr;
 
 	return 0;
 }
