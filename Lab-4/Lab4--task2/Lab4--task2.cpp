@@ -17,34 +17,35 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Rus");
     srand(time(NULL));
-    int n, m;
+    const int n = 3, m = 3;
 
-    cout << "Введите кол-во строк матрицы\n";
-    cin >> n;
-    while (cin.fail() || cin.peek() != '\n' || n != (long long)n || n <= 0) {
-        cin.clear();
-        cin.ignore(99999, '\n');
-        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-        cin >> n;
-    }
+    //cout << "Введите кол-во строк матрицы\n";
+    //cin >> n;
+    //while (cin.fail() || cin.peek() != '\n' || n != (long long)n || n <= 0) {
+    //    cin.clear();
+    //    cin.ignore(99999, '\n');
+    //    cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+    //    cin >> n;
+    //}
 
-    cout << "Введите кол-во столбцов матрицы\n";
-    cin >> m;
-    while (cin.fail() || cin.peek() != '\n' || m != (long long)m || m <= 0) {
-        cin.clear();
-        cin.ignore(99999, '\n');
-        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-        cin >> m;
-    }
+    //cout << "Введите кол-во столбцов матрицы\n";
+    //cin >> m;
+    //while (cin.fail() || cin.peek() != '\n' || m != (long long)m || m <= 0) {
+    //    cin.clear();
+    //    cin.ignore(99999, '\n');
+    //    cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+    //    cin >> m;
+    //}
 
     if (n == 1 || m == 1) {
         cout << "У вектора нет диагоналей\n";
     }
     else {
-        int** arr = new int* [n];
-        for (int t = 0; t < n; ++t) {
-            arr[t] = new int[m];
-        }
+        //int** arr = new int* [n];
+        //for (int t = 0; t < n; ++t) {
+        //    arr[t] = new int[m];
+        //}
+        int arr[n][m]{};
 
         cout << "Введите значения элементов матрицы\n";
         for (int i = 0; i < n; ++i) {

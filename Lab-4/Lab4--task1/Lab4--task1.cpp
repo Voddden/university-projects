@@ -12,15 +12,16 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Rus");
 	cout << "Введите размерность массива\n";
-	int k;
-	cin >> k;
-	while (cin.fail() || cin.peek() != '\n' || k != (long long)k || k <= 0) {
-		cin.clear();
-		cin.ignore(99999, '\n');
-		cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-		cin >> k;
-	}
-	int* arr = new int[k];
+	const int k = 6;
+	/*cin >> k;*/
+	//while (cin.fail() || cin.peek() != '\n' || k != (long long)k || k <= 0) {
+	//	cin.clear();
+	//	cin.ignore(99999, '\n');
+	//	cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+	//	cin >> k;
+	//}
+	//int* arr = new int[k];
+	int arr[k];
 	cout << "Введите элементы массива:\n";
 	for (int i = 0; i < k; ++i) {
 		cout << "arr[" << i << "] = ";
