@@ -2,10 +2,13 @@
 //
 
 #include <iostream>
+#include "..\..\Libraries\StaticLib\Header.h";
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    int a = 5;
+    int b = 6;
+    cout << Sum(a, b);
 }
 
 // Run program: Ctrl + F5 or Debugш > Start Without Debugging menu
