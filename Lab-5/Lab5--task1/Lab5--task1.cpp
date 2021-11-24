@@ -2,13 +2,13 @@
 //
 
 #include <iostream>
-//#include "..\..\Libraries\StaticLib\Header.h";
+#include "..\staticLib\Header.h";
 using namespace std;
 
 int main() {
     int a = 5;
     int b = 6;
-    //cout << Sum(a, b);
+    cout << Sum(a, b);
     return 0;
 }
 
