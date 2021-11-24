@@ -1,19 +1,15 @@
-﻿// Lab5--task1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// Lab5--task8.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-//#include "..\..\Libraries\StaticLib\Header.h";
-using namespace std;
 
-int main() {
-    int a = 5;
-    int b = 6;
-    //cout << Sum(a, b);
-    return 0;
+int main()
+{
+    std::cout << "Hello World!\n";
 }
 
-// Run program: Ctrl + F5 or Debugш > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menuл
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
 
 // Tips for Getting Started: 
 //   1. Use the Solution Explorer window to add/manage files
