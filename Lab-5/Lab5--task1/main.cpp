@@ -14,6 +14,7 @@ int main() {
 	setlocale(LC_ALL, "Rus");
 	srand(time(NULL));
 
+	cout << "Все массивы целочисленные\n";
 	// 1
 	cout << "Введите размерность 2-мерного массива Z:\n";
 	int n, m;
@@ -29,33 +30,12 @@ int main() {
 		Z[t] = new int[n];
 	}
 
-	
-	// 2
-	cout << "Введите размерность 1-мерного массива X:\n";
-	int x;
-	cin >> x;
-	while (cin.fail() || cin.peek() != '\n' || x != (long long)x || x <= 0) {
-		cin.clear();
-		cin.ignore(99999, '\n');
-		cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-		cin >> x;
-	}
-	int* X = new int [x];
-
-	// 3
-	cout << "Введите размерность 1-мерного массива Y:\n";
-	int y;
-	cin >> y;
-	while (cin.fail() || cin.peek() != '\n' || y != (long long)y || y <= 0) {
-		cin.clear();
-		cin.ignore(99999, '\n');
-		cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-		cin >> y;
-	}
-	int* Y = new int [y];
+	int* X = new int [n];
+	int* Y = new int [m];
 
 	//X
-	for (int i = 0; i < x; ++i) {
+	cout << "Введите элементы массива X:\n";
+	for (int i = 0; i < n; ++i) {
 		cout << "X[" << i << "] = ";
 		cin >> X[i];
 		while (cin.fail() || cin.peek() != '\n' || X[i] != (long long)X[i]) {
@@ -67,19 +47,49 @@ int main() {
 		}
 	}
 
-	//for (int i = 0; i < n; ++i) {
-	//	for (int j = 0; j < n; ++j) {
-	//		Z[i][j] = X[i] * Y[j];
-	//	}
-	//}
-	//cout << endl;
-	//for (int i = 0; i < n; ++i) {
-	//	for (int j = 0; j < n; ++j) {
-	//		cout << Z[i][j] << " ";
-	//	}
-	//	cout << "\n";
-	//}
-	//cout << endl;
+	//Y
+	cout << "Введите элементы массива Y:\n";
+	for (int i = 0; i < m; ++i) {
+		cout << "Y[" << i << "] = ";
+		cin >> Y[i];
+		while (cin.fail() || cin.peek() != '\n' || Y[i] != (long long)Y[i]) {
+			cin.clear();
+			cin.ignore(99999, '\n');
+			cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+			cout << "Y[" << i << "] = ";
+			cin >> Y[i];
+		}
+	}
+
+	//Z
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < m; ++j) {
+			Z[i][j] = X[i] * Y[j];
+		}
+	}
+
+	cout << "\nМассив Z:\n";
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < m; ++j) {
+			cout << Z[i][j] << " ";
+		}
+		cout << "\n";
+	}
+	cout << endl;
+
+	// Алгоритм нахождения наиб. элемента
+	int s = 0, I = 0, J = 0;
+
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < m; ++j) {
+			if (Z[i][j] > s) {
+				s = Z[i][j];
+				I = i;
+				J = j;
+			}
+		}
+	}
+	cout << "Наибольший элемент массива Z и его значение:\n Z[" << I << "][" << J << "] == " << s << endl;
 
 
 
