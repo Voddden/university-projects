@@ -13,34 +13,23 @@ using namespace std;
 
 long long inputInt();
 
+long long inputArr(int i, int Ai);
+
 int main() {
     setlocale(LC_ALL, "Rus");
     cout << "¬ведите количество элементов в массиве\n";
     int n;
     n = inputInt();
 
-    //cin >> n;
-    //while (cin.fail() || cin.peek() != '\n' || n != (long long)n || n <= 0) {
-    //    cin.clear();
-    //    cin.ignore(99999, '\n');
-    //    cout << "¬ведены некорректные данные, попробуйте ещЄ раз:\n";
-    //    cin >> n;
-    //}
-
     int* A = new int[n];
-
+    
     cout << "¬ведите элементы массива:\n";
     for (int i = 0; i < n; ++i) {
-        cout << "X[" << i << "] = ";
-        cin >> A[i];
-        while (cin.fail() || cin.peek() != '\n' || A[i] != (long long)A[i]) {
-            cin.clear();
-            cin.ignore(99999, '\n');
-            cout << "¬ведены некорректные данные, попробуйте ещЄ раз:\n";
-            cout << "A[" << i << "] = ";
-            cin >> A[i];
-        }
+        A[i] = inputArr(i, A[i]);
     }
+    // рекурсвна€ функци€:
+
+
     return 0;
 }
 
@@ -60,4 +49,17 @@ long long inputInt() {
             cin.ignore(1, ' ');
     }
     return value;
+}
+
+long long inputArr(int i, int Ai) {
+    cout << "X[" << i << "] = ";
+    cin >> Ai;
+    while (cin.fail() || cin.peek() != '\n' || Ai != (long long)Ai) {
+        cin.clear();
+        cin.ignore(99999, '\n');
+        cout << "¬ведены некорректные данные, попробуйте ещЄ раз:\n";
+        cout << "A[" << i << "] = ";
+        cin >> Ai;
+    }
+    return Ai;
 }
