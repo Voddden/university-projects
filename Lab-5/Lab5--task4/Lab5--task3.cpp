@@ -64,14 +64,48 @@ int main() {
 		cout << "В массиве нет нулевых элементов\n";
 	}
 	else {
-		cout << "В массиве есть " << d << " нулевых элементов\n";
+		cout << "Количество нулевых элементов в массиве: " << d << "\n\n";
+		int x = d; // x - кол-во строк массива arr
+		int y = 2;
+		int** arr = new int* [x];
+		for (int t = 0; t < d; ++t) {
+			arr[t] = new int[y];
+		}
 
+		for (int i = 0; i < d; ++i) {
+			for (int j = 0; j < y; ++j) {
+				arr[i][j] = 0;
+			}
+		}
+
+		int g = 0;
+		for (int i = 0; i < n; ++i) {
+			for (int j = 0; j < m; ++j) {
+				if (A[i][j] == 0) {
+					arr[g][0] = i;
+					arr[g][1] = j;
+					++g;
+				}
+			}
+		}
+		/*
+		cout << "\nМассив индексов нулевых элементов:\n\n";
+		for (int i = 0; i < x; ++i) {
+			for (int j = 0; j < y; ++j) {
+				cout << setw(5) << arr[i][j] << " ";
+			}
+			cout << "\n";
+		}
+		cout << endl;
+		*/
+		cout << "Индексы нулевых элементов: ";
+		for (int i = 0; i < x; ++i) {
+			cout << "(" << arr[i][0] << ";" << arr[i][1] << ")" << " ";
+		}
+		cout << "\n";
+		// 2-3 end
 	}
 
-	//int* arr = new int [d];
-
-	// 2-3 end
-	
     return 0;
 }
 

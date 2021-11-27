@@ -10,25 +10,59 @@ Z[i][j] = X[i] * Y[j]
 
 using namespace std;
 #include <iostream>
+#include <iomanip>
 #include "..\StaticLib\Header.h";
-//#include "C:\Users\Danik Vodnev\source\repos\ЛАБЫ\Danik_Vodnev_153504\Lab-5\StaticLib\Header.h";
 
-int main() {
-	setlocale(LC_ALL, "Rus");
-	srand(time(NULL));
-	//cout << Sum(2, 5);
-	cout << "Массив целочисленный\n";
-	// 1
-	cout << "Введите размерность 2-мерного массива Z:\n";
-	int n, m;
-	
-	cin >> n >> m;
-	while (cin.fail() || cin.peek() != '\n' || n != (long long)n || n <= 0 || m != (long long)m || m <= 0) {
+long long inputInt() {
+	long double value;
+	cin >> value;
+	while (cin.peek() == ' ') cin.ignore(1, ' ');
+	while (cin.fail() || cin.peek() != '\n' || value <= 0 || value != (long long)value) {
+		cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+		cin.clear();
+		cin.ignore(3256, '\n');
+		cin >> value;
+		while (cin.peek() == ' ') cin.ignore(1, ' ');
+	}
+	return value;
+}
+
+long long inputArrX(int i, int Xi) {
+	cout << "X[" << i << "] = ";
+	cin >> Xi;
+	while (cin.fail() || cin.peek() != '\n' || Xi != (long long)Xi) {
 		cin.clear();
 		cin.ignore(99999, '\n');
 		cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-		cin >> n >> m;
+		cout << "X[" << i << "] = ";
+		cin >> Xi;
 	}
+	return Xi;
+}
+
+long long inputArrY(int i, int Yi) {
+	cout << "Y[" << i << "] = ";
+	cin >> Yi;
+	while (cin.fail() || cin.peek() != '\n' || Yi != (long long)Yi) {
+		cin.clear();
+		cin.ignore(99999, '\n');
+		cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+		cout << "Y[" << i << "] = ";
+		cin >> Yi;
+	}
+	return Yi;
+}
+
+int main() {
+	setlocale(LC_ALL, "Rus");
+
+	cout << "Массив целочисленный\n";
+	cout << "---Введите размерность 2-мерного массива Z:\n";
+	cout << "Кол-во строк:\n";
+	int n = inputInt();
+	cout << "Кол-во столбцов:\n";
+	int m = inputInt();
+	
 	int** Z = new int* [n];
 	for (int t = 0; t < n; ++t) {
 		Z[t] = new int[n];
@@ -38,31 +72,15 @@ int main() {
 	int* Y = new int [m];
 
 	//X
-	cout << "Введите элементы массива X:\n";
+	cout << "---Введите элементы массива X:\n";
 	for (int i = 0; i < n; ++i) {
-		cout << "X[" << i << "] = ";
-		cin >> X[i];
-		while (cin.fail() || cin.peek() != '\n' || X[i] != (long long)X[i]) {
-			cin.clear();
-			cin.ignore(99999, '\n');
-			cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-			cout << "X[" << i << "] = ";
-			cin >> X[i];
-		}
+		X[i] = inputArrX(i, X[i]);
 	}
 
 	//Y
 	cout << "Введите элементы массива Y:\n";
 	for (int i = 0; i < m; ++i) {
-		cout << "Y[" << i << "] = ";
-		cin >> Y[i];
-		while (cin.fail() || cin.peek() != '\n' || Y[i] != (long long)Y[i]) {
-			cin.clear();
-			cin.ignore(99999, '\n');
-			cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-			cout << "Y[" << i << "] = ";
-			cin >> Y[i];
-		}
+		Y[i] = inputArrY(i, Y[i]);
 	}
 
 	//Z
@@ -76,7 +94,7 @@ int main() {
 	cout << "\nМассив Z:\n";
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < m; ++j) {
-			cout << Z[i][j] << " ";
+			cout << setw(5) << Z[i][j] << " ";
 		}
 		cout << "\n";
 	}

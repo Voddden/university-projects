@@ -27,26 +27,22 @@ int main() {
     for (int i = 0; i < n; ++i) {
         A[i] = inputArr(i, A[i]);
     }
-    // рекурсвная функция:
+    // рекурсивная функция:
 
-
+    //
     return 0;
 }
 
 long long inputInt() {
     long double value;
     cin >> value;
-    // Удаление всех пробелов (если они есть) после первого числа, если оно было в потоке
-    while (cin.peek() == ' ')
-        cin.ignore(1, ' ');
-    // Проверка состояния потока ввода, конца строки, области допустимых значений и экспоненты
+    while (cin.peek() == ' ') cin.ignore(1, ' ');
     while (cin.fail() || cin.peek() != '\n' || value <= 0 || value != (long long)value) {
+        cin.clear();
+        cin.ignore(3256, '\n');
         cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-        cin.clear(); // Включение потока ввода
-        cin.ignore(3256, '\n'); // Очищение буфера потока ввода
         cin >> value;
-        while (cin.peek() == ' ')
-            cin.ignore(1, ' ');
+        while (cin.peek() == ' ') cin.ignore(1, ' ');
     }
     return value;
 }
