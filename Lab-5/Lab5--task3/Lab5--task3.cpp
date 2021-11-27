@@ -101,9 +101,7 @@ int main() {
 long long inputInt() {
 	long double value;
 	cin >> value;
-	// Удаление всех пробелов (если они есть) после первого числа, если оно было в потоке
-	while (cin.peek() == ' ')
-		cin.ignore(1, ' ');
+	while (cin.peek() == ' ') cin.ignore(1, ' ');
 	// Проверка состояния потока ввода, конца строки, области допустимых значений и экспоненты
 	while (cin.fail() || cin.peek() != '\n' || value <= 0 || value != (long long)value) {
 		cout << "Введены некорректные данные, попробуйте ещё раз:\n";

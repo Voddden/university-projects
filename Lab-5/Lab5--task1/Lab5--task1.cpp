@@ -10,8 +10,8 @@ Z[i][j] = X[i] * Y[j]
 
 using namespace std;
 #include <iostream>
-//#include "..\StaticLib\Header.h";
-#include "C:\Users\Danik Vodnev\source\repos\À¿¡€\Danik_Vodnev_153504\Lab-5\StaticLib\Header.h";
+#include "..\StaticLib\Header.h";
+//#include "C:\Users\Danik Vodnev\source\repos\À¿¡€\Danik_Vodnev_153504\Lab-5\StaticLib\Header.h";
 
 int main() {
 	setlocale(LC_ALL, "Rus");
