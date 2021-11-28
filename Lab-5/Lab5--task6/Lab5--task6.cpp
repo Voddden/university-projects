@@ -8,46 +8,45 @@
 using namespace std;
 #include <iostream>
 
-int f(int n);
-long long inputInt();
+long long inputInt() {
+	long double value;
+	cin >> value;
+	while (cin.peek() == ' ') cin.ignore(1, ' ');
+	while (cin.fail() || cin.peek() != '\n' || value <= 0 || value != (long long)value) {
+		cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+		cin.clear();
+		cin.ignore(3256, '\n');
+		cin >> value;
+		while (cin.peek() == ' ') cin.ignore(1, ' ');
+	}
+	return value;
+}
+
+long long f(long long n) {
+	if (n % 2 == 1) {
+		return n;
+	}
+	if (n % 2 == 0) {
+		long long ntemp = n;
+		while (ntemp > 0 && ntemp % 2 == 0) {
+			ntemp = ntemp / 2;
+		}
+		return ntemp;
+	}
+	
+}
 
 int main() {
-    setlocale(LC_ALL, "Rus");
+	setlocale(LC_ALL, "Rus");
 
-    cout << "Введите число n\n";
-    int n = inputInt();
+	cout << "Введите число n\n";
+	long long n = inputInt();
+	//cout << "Наибольший нечётный делитель числа " << n << " равен:\n" << f(n);
+	long long sum = 0;
+	for (int i = 1; i <= n; ++i) {
+	    sum += f(i);
+	}
+	cout << "Сумма равна:\n" << sum << endl;
 
-    long long sum = 0;
-    for (int i = 0; i <= n; ++i) {
-        sum += f(i);
-    }
-    cout << "Сумма равна:\n" << sum << endl;
-
-    return 0;
-}
-
-int f(int n) {
-    int i;
-    for (i = 2; i <= sqrt(n); i++)
-    {
-        if (n % i == 0)
-        {
-            return n / i;
-        }
-    }
-    return 1;
-}
-
-long long inputInt() {
-    long double value;
-    cin >> value;
-    while (cin.peek() == ' ') cin.ignore(1, ' ');
-    while (cin.fail() || cin.peek() != '\n' || value <= 0 || value != (long long)value) {
-        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-        cin.clear();
-        cin.ignore(3256, '\n');
-        cin >> value;
-        while (cin.peek() == ' ') cin.ignore(1, ' ');
-    }
-    return value;
+	return 0;
 }
