@@ -56,7 +56,7 @@ int F(int n) {
 
 int S(int p, int q) {
 	long long result = 0;
-	for (int i = p; i < q; ++i) {
+	for (int i = p; i <= q; ++i) {
 		result += F(i);
 	}
 	return result;

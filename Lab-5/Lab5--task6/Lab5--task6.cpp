@@ -33,7 +33,14 @@ long long f(long long n) {
 		}
 		return ntemp;
 	}
-	
+}
+
+long long sum(long long n) {
+	long long s = 0;
+	for (int i = 1; i <= n; ++i) {
+		s += f(i);
+	}
+	return s;
 }
 
 int main() {
@@ -42,11 +49,7 @@ int main() {
 	cout << "Введите число n\n";
 	long long n = inputInt();
 	//cout << "Наибольший нечётный делитель числа " << n << " равен:\n" << f(n);
-	long long sum = 0;
-	for (int i = 1; i <= n; ++i) {
-	    sum += f(i);
-	}
-	cout << "Сумма равна:\n" << sum << endl;
+	cout << "Сумма равна:\n" << sum(n) << endl;
 
 	return 0;
 }
