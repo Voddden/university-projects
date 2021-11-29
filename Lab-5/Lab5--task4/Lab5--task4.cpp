@@ -7,39 +7,35 @@
 using namespace std;
 #include <iostream>
 
-long long inputInt();
 int F(int n);
 int S(int p, int q);
 
 int main() {
 	setlocale(LC_ALL, "Rus");
 
-	cout << "---¬ведите p и q\n";
-	int p, q;
-	cin >> p >> q;
-	while (cin.fail() || cin.peek() != '\n' || p != (long long)p || p <= 0 || q != (long long)q || q <= 0) {
-		cin.clear();
-		cin.ignore(99999, '\n');
-		cout << "¬ведены некорректные данные, попробуйте ещЄ раз:\n";
-		cin >> p >> q;
+	cout << "¬водите p и q\n";
+	int arr[1000][2];
+	int i = 0;
+	for (; arr[i-1][0] != -1 || arr[i-1][1] != -1; ++i) {
+		cin >> arr[i][0] >> arr[i][1];
+		while (cin.fail() || cin.peek() != '\n' || arr[i][0] != (long long)arr[i][0] || arr[i][1] != (long long)arr[i][1]) {
+			cin.clear();
+			cin.ignore(99999, '\n');
+			cout << "¬ведены некорректные данные, попробуйте ещЄ раз:\n";
+			cin >> arr[i][0] >> arr[i][1];
+		}
 	}
-	cout << "–езультат:\n" << S(p, q) << endl;
+	cout << "–езультат:\n";
+	////вывод массива входных данных
+	//for (int j = 0; j < i; ++j) {
+	//	cout << arr[j][0] << " " << arr[j][1] << endl;
+	//}
+
+	for (int j = 0; j < i - 1; ++j) {
+		cout << S(arr[j][0], arr[j][1]) << endl;
+	}
 
 	return 0;
-}
-
-long long inputInt() {
-	long double value;
-	cin >> value;
-	while (cin.peek() == ' ') cin.ignore(1, ' ');
-	while (cin.fail() || cin.peek() != '\n' || value <= 0 || value != (long long)value) {
-		cout << "¬ведены некорректные данные, попробуйте ещЄ раз:\n";
-		cin.clear();
-		cin.ignore(3256, '\n');
-		cin >> value;
-		while (cin.peek() == ' ') cin.ignore(1, ' ');
-	}
-	return value;
 }
 
 int F(int n) {
