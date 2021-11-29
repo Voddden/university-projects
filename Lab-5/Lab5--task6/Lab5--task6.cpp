@@ -8,20 +8,6 @@
 using namespace std;
 #include <iostream>
 
-long long inputInt() {
-	long double value;
-	cin >> value;
-	while (cin.peek() == ' ') cin.ignore(1, ' ');
-	while (cin.fail() || cin.peek() != '\n' || value <= 0 || value != (long long)value) {
-		cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-		cin.clear();
-		cin.ignore(3256, '\n');
-		cin >> value;
-		while (cin.peek() == ' ') cin.ignore(1, ' ');
-	}
-	return value;
-}
-
 long long f(long long n) {
 	if (n % 2 == 1) {
 		return n;
@@ -46,10 +32,25 @@ long long sum(long long n) {
 int main() {
 	setlocale(LC_ALL, "Rus");
 
-	cout << "Введите число n\n";
-	long long n = inputInt();
+	cout << "Вводите данные:\n";
+	int arr[3];
+	for (int i = 0; i < 3; ++i) {
+		cin >> arr[i];
+		while (cin.fail() || cin.peek() != '\n' || arr[i] != (long long)arr[i] || arr[i] <= 0) {
+			cin.clear();
+			cin.ignore(99999, '\n');
+			cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+			cin >> arr[i];
+		}
+
+	}
+	cout << "\nРезультат:\n";
+	for (int i = 0; i < 3; ++i) {
+		cout << sum(arr[i]) << endl;
+	}
+
 	//cout << "Наибольший нечётный делитель числа " << n << " равен:\n" << f(n);
-	cout << "Сумма равна:\n" << sum(n) << endl;
+	//cout << "Сумма равна:\n" << sum(n) << endl;
 
 	return 0;
 }
