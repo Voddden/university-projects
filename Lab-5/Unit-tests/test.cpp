@@ -22,7 +22,18 @@ int S(int p, int q) {
 }
 //task-5
 
+long long recurse(long long x, long long y, long long n) {
+	if (y == 0)
+		return 1;
+	if (y % 2 == 1)
+		return x * recurse(x * x % n, y / 2, n) % n;
+	return recurse(x * x % n, y / 2, n);
+}
 
+long long recursResult(long long k, long long n, long long t) {
+	long long m = pow(10, t), l = k % m;
+	return recurse(l, n, m);
+}
 
 //task-6
 long long f(long long n) {
@@ -59,6 +70,26 @@ TEST(task4_2, Lab5) {
 
 TEST(task4_3, Lab5) {
 	EXPECT_EQ(52, S(30, 40));
+	EXPECT_TRUE(true);
+}
+
+TEST(task5_1, Lab5) {
+	EXPECT_EQ(736, recursResult(1234, 1234, 4));
+	EXPECT_TRUE(true);
+}
+
+TEST(task5_2, Lab5) {
+	EXPECT_EQ(39087387, recursResult(2323, 99999999999, 8));
+	EXPECT_TRUE(true);
+}
+
+TEST(task5_3, Lab5) {
+	EXPECT_EQ(494777344, recursResult(4, 99999, 9));
+	EXPECT_TRUE(true);
+}
+
+TEST(task5_4, Lab5) {
+	EXPECT_EQ(91255296, recursResult(888, 888, 8));
 	EXPECT_TRUE(true);
 }
 
