@@ -1,61 +1,59 @@
-//Лабораторная 5, задача 2 Выполнена: Воднев Д. И.
-
-/*
-Вариант 5:
-Для заданного одномерного массива A из N элементов найти значение минимального
-элемента массива и его номер. Рекурсивную функцию применять каждый раз отдельно
-для каждой из половин массива. Рекурсивные вызовы заканчивать, когда останется
-только один элемент.
-*/
+// Лабораторная 5, задача 2 Выполнена: Воднев Д. И.
 
 using namespace std;
-#include <iostream>
+#include<iostream>
+#include<cmath>
+#include<ctime>
+#include<Windows.h>
 
-long long inputInt() {
-    long double value;
-    cin >> value;
-    while (cin.peek() == ' ') cin.ignore(1, ' ');
-    while (cin.fail() || cin.peek() != '\n' || value <= 0 || value != (long long)value) {
-        cin.clear();
-        cin.ignore(3256, '\n');
-        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-        cin >> value;
-        while (cin.peek() == ' ') cin.ignore(1, ' ');
-    }
-    return value;
-}
+int main() {
+    setlocale(LC_ALL, "ru");
+    srand(time(0));
 
-long long inputArr(int i, int Ai) {
-    cout << "X[" << i << "] = ";
-    cin >> Ai;
-    while (cin.fail() || cin.peek() != '\n' || Ai != (long long)Ai) {
+    HINSTANCE load;
+    load = LoadLibrary(L"D:/С++/Laba5/StaticLib/Debug/DynamicLib.dll"); // помещение модуля библиотеки в память процессора
+    typedef int (*Account) (int*, int, double); //тип указателя на функцию
+    Account account;
+    account = (Account)GetProcAddress(load, "account"); //получение адресов функций
+
+    int size, i = 0;
+    double one_third, two_third;
+
+    cout << "Введите размер массива:\n";
+    cin >> size;
+    while (cin.fail() || cin.peek() != '\n' || size != (long long)size || size <= 0) {
         cin.clear();
         cin.ignore(99999, '\n');
         cout << "Введены некорректные данные, попробуйте ещё раз:\n";
-        cout << "A[" << i << "] = ";
-        cin >> Ai;
+        cin >> size;
     }
-    return Ai;
-}
 
-long long Min(int a, int b, int Ai) {
-    return min(Min(0, )
-}
-
-int main() {
-    setlocale(LC_ALL, "Rus");
-    cout << "Введите количество элементов в массиве\n";
-    int n;
-    n = inputInt();
-
-    int* A = new int[n];
-    
-    cout << "Введите элементы массива:\n";
-    for (int i = 0; i < n; ++i) {
-        A[i] = inputArr(i, A[i]);
+    int* arr = new int[size];
+    //cout << "Введите целочисленные элементы массива: \n";
+    cout << "Массив заполняется случайными элементами:\n";
+    for (int i = 0; i < size; i++) {
+        //cout << "[" << i + 1 << "]" << " ";
+        //arr[i] = input();
+        //cin >> arr[i];
+        arr[i] = rand() % 50 - 30;
     }
-    // рекурсивная функция:
 
-    //
+    cout << "\nНаш массив: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+
+    one_third = (double)size / 3.;
+    //if (one_third > (int)one_third + 0.5) one_third += 1;
+    two_third = 2. * (double)size / 3.;
+    //if (two_third > (int)two_third + 0.5) two_third += 1;
+
+    cout << "\nЭлементы удовлетворяющие условию:\n";
+    i = account(arr, i, one_third);
+    account(arr, i, two_third);
+    cout << endl;
+
+    FreeLibrary(load);
+    delete[] arr;
     return 0;
 }
