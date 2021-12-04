@@ -11,28 +11,6 @@
 using namespace std;
 #include <iostream>
 
-long long inputInt();
-
-long long inputArr(int i, int Ai);
-
-int main() {
-    setlocale(LC_ALL, "Rus");
-    cout << "¬ведите количество элементов в массиве\n";
-    int n;
-    n = inputInt();
-
-    int* A = new int[n];
-    
-    cout << "¬ведите элементы массива:\n";
-    for (int i = 0; i < n; ++i) {
-        A[i] = inputArr(i, A[i]);
-    }
-    // рекурсивна€ функци€:
-
-    //
-    return 0;
-}
-
 long long inputInt() {
     long double value;
     cin >> value;
@@ -58,4 +36,26 @@ long long inputArr(int i, int Ai) {
         cin >> Ai;
     }
     return Ai;
+}
+
+long long Min(int a, int b, int Ai) {
+    return min(Min(0, )
+}
+
+int main() {
+    setlocale(LC_ALL, "Rus");
+    cout << "¬ведите количество элементов в массиве\n";
+    int n;
+    n = inputInt();
+
+    int* A = new int[n];
+    
+    cout << "¬ведите элементы массива:\n";
+    for (int i = 0; i < n; ++i) {
+        A[i] = inputArr(i, A[i]);
+    }
+    // рекурсивна€ функци€:
+
+    //
+    return 0;
 }
