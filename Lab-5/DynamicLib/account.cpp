@@ -1,7 +1,22 @@
-#include<iostream>
-#include<cmath>
-extern "C" __declspec(dllexport) int account(int* arr, int i, double n) {
-	if (i == n) return i;
-	if (cos(arr[i] * arr[i]) > 0 && arr[i] < 0) std::cout << arr[i] << " ";
-	account(arr, ++i, n);
+#include "DynamicLib.h"
+#include <iostream>
+int input() {
+	int x;
+	while (true)
+	{
+		std::cin >> x;
+		if (!std::cin.fail())
+			return x;
+		std::cin.clear();
+		std::cin.ignore(320000, '\n');
+	}
 }
+
+int multiplyOfElements(int* array, int size, int endSize)
+{
+	if (size == endSize)
+		return array[size] * array[size] + cos(array[size]);
+
+	return array[size] * array[size] + cos(array[size]) * multiplyOfElements(array, size - 1, endSize);
+}
+
