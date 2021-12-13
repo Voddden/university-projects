@@ -99,10 +99,17 @@ int main() {
             arr_2[i][j] = 3;
         }
     }
-
+    int r = 0;
     for (int i = 0; i < groups; ++i) {
-        if (temparr_1[i] % 2 == 1) 
-            arr_2[i] = arr_1[i];
+        if (temparr_1[i] % 2 == 1) {
+            //arr_2[i] = arr_1[i]; // баг!!!
+            //r = 0;
+            for (int j = 0; arr_1[i][j] != 3; ++j) {
+                arr_2[r][j] = arr_1[i][j];
+                //++r;
+            }
+            ++r;
+        }
     }
 
     // ---- подсчёт кол-ва единиц в нечётных группах
@@ -145,7 +152,7 @@ int main() {
     }
 
 
-    cout << "\narr3:\n";
+    cout << "\nКол-во единиц в группах в нечётным кол-вом элементов(arr3):\n";
     for (int i = 0; i < q; ++i) {
         cout << setw(2) << temparr_2[i] << " ";
     }
