@@ -71,49 +71,52 @@ int main() {
         if (temparr_1[i] % 2 == 1) ++q;
     }
 
-    // --
-
+    if (q == 0) {
+        cout << "Групп с нечётным кол-вом элементов нет\n";
+    }
+    else {
     // ---- создание массива из групп с нечётным кол-вом символов (arr_2)
 
-    int** arr_2 = new int* [q];
-    for (int i = 0; i < q; ++i) {
-        arr_2[i] = new int[max_arr];
-    }
-
-    for (int i = 0; i < q; ++i) {
-        for (int j = 0; j < max_arr; ++j) {
-            arr_2[i][j] = 3;
+        int** arr_2 = new int* [q];
+        for (int i = 0; i < q; ++i) {
+            arr_2[i] = new int[max_arr];
         }
-    }
-    int r = 0;
-    for (int i = 0; i < groups; ++i) {
-        if (temparr_1[i] % 2 == 1) {
-            for (int j = 0; arr_1[i][j] != 3; ++j) {
-                arr_2[r][j] = arr_1[i][j];
+
+        for (int i = 0; i < q; ++i) {
+            for (int j = 0; j < max_arr; ++j) {
+                arr_2[i][j] = 3;
             }
-            ++r;
         }
-    }
-
-    // ---- подсчёт кол-ва единиц в нечётных группах
-
-    int* temparr_2 = new int[q];
-    for (int i = 0; i < q; ++i) {
-        temparr_2[i] = 0;
-    }
-    int e = 0;
-    for (int i = 0; i < q; ++i) {
-        for (int j = 0; arr_2[i][j] != 3; ++j) {
-            if (arr_2[i][j] % 2 == 1) ++temparr_2[i];
+        int r = 0;
+        for (int i = 0; i < groups; ++i) {
+            if (temparr_1[i] % 2 == 1) {
+                for (int j = 0; arr_1[i][j] != 3; ++j) {
+                    arr_2[r][j] = arr_1[i][j];
+                }
+                ++r;
+            }
         }
-    }
 
-    // --
+        // ---- подсчёт кол-ва единиц в нечётных группах
 
-    cout << "Кол-во единиц в группах в нечётным кол-вом элементов:\n";
-    for (int i = 0; i < q; ++i) {
-        cout << setw(2) << temparr_2[i] << " ";
+        int* temparr_2 = new int[q];
+        for (int i = 0; i < q; ++i) {
+            temparr_2[i] = 0;
+        }
+        int e = 0;
+        for (int i = 0; i < q; ++i) {
+            for (int j = 0; arr_2[i][j] != 3; ++j) {
+                if (arr_2[i][j] % 2 == 1) ++temparr_2[i];
+            }
+        }
+
+        // --
+
+        cout << "Кол-во единиц в группах в нечётным кол-вом элементов:\n";
+        for (int i = 0; i < q; ++i) {
+            cout << setw(2) << temparr_2[i] << " ";
+        }
+        cout << endl;
     }
-    cout << endl;
     return 0;
 }
