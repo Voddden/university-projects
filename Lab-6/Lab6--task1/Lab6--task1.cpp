@@ -30,116 +30,116 @@ int main() {
 
     int m = groups;
     int n = max_arr;
-    int** arr = new int* [m];
+    int** arr_1 = new int* [m];
     for (int i = 0; i < m; ++i) {
-        arr[i] = new int[n];
+        arr_1[i] = new int[n];
     }
     for (int i = 0; i < m; ++i) {
         for (int j = 0; j < n; ++j) {
-            arr[i][j] = 3;
+            arr_1[i][j] = 3;
         }
     }
 
-    // ---- заполнение массива arr группами
+    // ---- заполнение массива arr_1 группами
     int o = 0;
     for (int i = 0; i < m; ++i) {
         for (int j = 0; str[o] != ' ' && str[o] != '\0'; ++j) {
-            arr[i][j] = str[o] - 48;
+            arr_1[i][j] = str[o] - 48;
             ++o;
         }
         ++o;
     }
     // --
     
-    // ---- создание массива из количеств элементов массива arr
+    // ---- создание массива из количеств элементов массива arr_1
 
-    int* arr1 = new int[groups];
+    int* temparr_1 = new int[groups];
     for (int i = 0; i < groups; ++i) {
-        arr1[i] = 0;
+        temparr_1[i] = 0;
     }
     int y = 0;
     for (int i = 0; i < m; ++i) {
         y = 0;
-        while (arr[i][y] != 3) {
-            ++arr1[i];
+        while (arr_1[i][y] != 3) {
+            ++temparr_1[i];
             ++y;
         }
     }
 
-    // перебор массива arr1: подсчёт кол-ва нечётных элементов (групп)
+    // перебор массива temparr_1: подсчёт кол-ва нечётных элементов (групп)
     int q = 0; // счётчик кол-ва нечётных групп
     for (int i = 0; i < groups; ++i) {
-        if (arr1[i] % 2 == 1) ++q;
+        if (temparr_1[i] % 2 == 1) ++q;
     }
 
 
-    cout << "\nКол-во элементов групп: (arr1)";
+    cout << "\nКол-во элементов групп: (temparr_1)";
     for (int i = 0; i < groups; ++i) {
-        cout << arr1[i] << " ";
+        cout << temparr_1[i] << " ";
     }
     cout << "\nКол-во нечётных групп: (q)" << q;
 
     // --
 
-    // ---- создание массива из групп с нечётным кол-вом символов (arr2)
+    // ---- создание массива из групп с нечётным кол-вом символов (arr_2)
     
 
-    //int** arr = new int* [m];
+    //int** arr_1 = new int* [m];
     //for (int i = 0; i < m; ++i) {
-    //    arr[i] = new int[n];
+    //    arr_1[i] = new int[n];
     //}
 
-    int** arr2 = new int* [q];
+    int** arr_2 = new int* [q];
     for (int i = 0; i < q; ++i) {
-        arr2[i] = new int[max_arr];
+        arr_2[i] = new int[max_arr];
     }
 
     for (int i = 0; i < q; ++i) {
         for (int j = 0; j < max_arr; ++j) {
-            arr2[i][j] = 3;
+            arr_2[i][j] = 3;
         }
     }
 
     for (int i = 0; i < groups; ++i) {
-        if (arr1[i] % 2 == 1) 
-            arr2[i] = arr[i];
+        if (temparr_1[i] % 2 == 1) 
+            arr_2[i] = arr_1[i];
     }
 
     // ---- подсчёт кол-ва единиц в нечётных группах
 
-    int* arr3 = new int[q];
+    int* temparr_2 = new int[q];
     for (int i = 0; i < q; ++i) {
-        arr3[i] = 0;
+        temparr_2[i] = 0;
     }
     int e = 0;
     for (int i = 0; i < q; ++i) {
         //e = 0;
-        //while (arr2[i][e] != 3) {
-        //    if (arr2[i][e] == 1) ++arr3[i];
+        //while (arr_2[i][e] != 3) {
+        //    if (arr_2[i][e] == 1) ++temparr_2[i];
         //    ++e;
         //}
 
-        for (int j = 0; arr2[i][j] != 3; ++j) {
-            if (arr2[i][j] % 2 == 1) ++arr3[i];
+        for (int j = 0; arr_2[i][j] != 3; ++j) {
+            if (arr_2[i][j] % 2 == 1) ++temparr_2[i];
         }
     }
 
     // --
 
     // --
-    cout << "\nМассив arr:\n";
+    cout << "\nМассив arr_1:\n";
     for (int i = 0; i < m; ++i) {
         for (int j = 0; j < n; ++j) {
-            cout << setw(2) << arr[i][j] << " ";
+            cout << setw(2) << arr_1[i][j] << " ";
         }
         cout << endl;
     }
 
 
-    cout << "Массив нечётного кол-ва групп (arr2):\n";
+    cout << "Массив нечётного кол-ва групп (arr_2):\n";
     for (int i = 0; i < q; ++i) {
         for (int j = 0; j < max_arr; ++j) {
-            cout << setw(2) << arr2[i][j] << " ";
+            cout << setw(2) << arr_2[i][j] << " ";
         }
         cout << endl;
     }
@@ -147,7 +147,7 @@ int main() {
 
     cout << "\narr3:\n";
     for (int i = 0; i < q; ++i) {
-        cout << setw(2) << arr3[i] << " ";
+        cout << setw(2) << temparr_2[i] << " ";
     }
     return 0;
 }
