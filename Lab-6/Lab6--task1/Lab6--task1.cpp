@@ -9,15 +9,22 @@ using namespace std;
 #include <iostream>
 #include <iomanip>
 #include <cstring>
+#include <cstdlib>
 
 int main() {
     setlocale(LC_ALL, "Rus");
     cout << "Введите строку:\n";
-    const int max_str = 81;
-    const int max_arr = 30;
+    const int max_str = 10;
     char str[max_str];
-    cin.get(str, max_str);
+    cin.getline(str, max_str);
+    for (int i = 0; i < strlen(str); ++i) {
+        if (str[i] != '1' && str[i] != '0' && str[i] != ' ') {
+            cout << "Введены некорректные данные\n";
+            return 0;
+        }
+    }
 
+    const int max_arr = 30;
     // ---- #1 кол-во групп
     int groups = 1;
     for (int i = 0; i < strlen(str); ++i) {
@@ -25,7 +32,6 @@ int main() {
     }
     /*cout << "Кол-во групп: " << groups;*/
     // --
-
 
     int m = groups;
     int n = max_arr;
