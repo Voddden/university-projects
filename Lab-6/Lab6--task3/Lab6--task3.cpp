@@ -11,38 +11,40 @@ using namespace std;
 #include <string>
 
 int main() {
-    int x = 3;
-    string s1 = "supr";
-    string s2 = "supr";
-    string s3 = "sup";
-    
-    
-    
-    //string** arr = new string* [x];
-    //for (int i = 0; i < x; ++i) {
-    //    arr[i] = new string[y];
-    //}
-    
+    cout << "---Enter number of strings: ";
+    int x; // количество строк
+    cin >> x;
+    while (cin.fail() || cin.peek() != '\n' || x != (long long)x || x <= 0) {
+        cin.clear();
+        cin.ignore(99999, '\n');
+        cout << "Incorrect data has been entered, please try again:\n";
+        cin >> x;
+    }
+
+    cin.ignore(32767, '\n');
     string* arr = new string[x];
-    //for (int i = 0; i < x; ++i) {
-    //    arr[i] = 
-    //}
-    arr[0] = s1;
-    arr[1] = s2;
-    arr[2] = s3;
-    int average = (s1.length() + s2.length() + s3.length()) / x;
-
-
+    cout << "---Enter the strings:\n";
     for (int i = 0; i < x; ++i) {
-        cout << arr[i] << endl;
+        cout << "string#" << i + 1 << ": ";
+        getline(cin, arr[i]);
     }
-    cout << endl;
+    // --
+    int average = 0;
     for (int i = 0; i < x; ++i) {
-        for (int j = 0; j < s3.length(); ++j) {
-            cout << arr[i][j] << " ";
-        }
-        cout << "\n";
+        average += arr[i].length();
     }
+    average /= x;
+    // --
+    for (int i = 0; i < x; ++i) {
+        arr[i].resize(average, ' ');
+    }
+    // --
+    cout << "\nResult:\n";
+    for (int i = 0; i < x; ++i) {
+        cout << arr[i] << "\n";
+    }
+
+    //cout << average;
     delete[] arr;
     return 0;
 }
