@@ -123,6 +123,26 @@ int main() {
             cout << setw(2) << temparr_2[i] << " ";
         }
         cout << endl;
+
+        //-- освобождение памяти
+
+        //arr_1 (m, n)
+        for (int i = 0; i < m; ++i) {
+            delete[] arr_1[i];
+        }
+        delete[] arr_1;
+
+        //temparr_1 (groups)
+        delete[] temparr_1;
+
+        //arr_2 (q, max_arr)
+        for (int i = 0; i < q; ++i) {
+            delete[] arr_2[i];
+        }
+        delete[] arr_2;
+
+        //temparr_2 (q)
+        delete[] temparr_2;
     }
     return 0;
 }

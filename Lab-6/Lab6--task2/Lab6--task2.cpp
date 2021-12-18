@@ -15,7 +15,7 @@ int main() {
     string subs;
     char symbol;
 
-    s = "Neque porro quisquam est qui doloram ipsum quia dolor sit amet, consectet, adipisci velitam";
+    s = "Neque porro quisquam est qui doloram ipsum quia dolor sit amet, consectet, adipisci velituam";
     subs = "am";
     symbol = '*';
 
@@ -64,6 +64,6 @@ int main() {
 
     // --
     cout << endl<< s << endl;
-    
+    delete[] arr;
     return 0;
 }
