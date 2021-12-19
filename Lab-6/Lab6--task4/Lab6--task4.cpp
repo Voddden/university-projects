@@ -35,21 +35,12 @@ using namespace std;
 int main() {
 	cout << "Enter the string:\n";
 	string s;
-	getline(cin, s);
-	//string str = s;
-
+	getline(cin, s, '=');
+	if (s.length() > 100) {
+		cout << "The string cannot contain more than 100 characters\n";
+		return 0;
+	}
 	//// -- 1)
-	//// 1.2) 
-	//for (int i = 0; i < s.length(); ++i) {
-	//	if (s[i] == 'с' && (s[i + 1] == 'e' || s[i + 1] == 'i' || s[i + 1] == 'y'))
-	//		s[i] = 's';
-	//}
-	//// 1.1)
-	//for (int i = 0; i < s.length(); ++i) {
-	//	if (s[i] == 'c')
-	//		s[i] = 'k';
-	//}
-
 	for (int i = 0; i < s.length(); ++i) {
 		if (s[i] == 'c' && (s[i + 1] == 'e' || s[i + 1] == 'i' || s[i + 1] == 'y')) {
 			s[i] = 's';
@@ -58,41 +49,109 @@ int main() {
 			s[i] = 'k';
 		}
 	}
+	// 
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == '—' && (s[i + 1] == 'E' || s[i + 1] == 'I' || s[i + 1] == 'Y')) {
+			s[i] = 'S';
+		}
+		else if (s[i] == 'C') {
+			s[i] = 'K';
+		}
+	}
 	//// -- 3)
 	for (int i = 0; i < s.length(); ++i) {
 		if (s[i] == 'q' && s[i + 1] == 'u')
 			s.replace(i, 2, "kv");
+	}
+	//
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'Q' && s[i + 1] == 'u')
+			s.replace(i, 2, "Kv");
 	}
 	//// -- 2)
 	for (int i = 0; i < s.length(); ++i) {
 		if (s[i] == 'q')
 			s[i] = 'k';
 	}
+	//
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'Q')
+			s[i] = 'K';
+	}
 	//// -- 4)
 	for (int i = 0; i < s.length(); ++i) {
 		if (s[i] == 'x')
 			s.replace(i, 1, "ks");
+	}
+	//
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'X')
+			s.replace(i, 1, "Ks");
 	}
 	//// -- 5)
 	for (int i = 0; i < s.length(); ++i) {
 		if (s[i] == 'w')
 			s[i] = 'v';
 	}
+	//
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'W')
+			s[i] = 'V';
+	}
 	//// -- 6) ph -> f
 	for (int i = 0; i < s.length(); ++i) {
 		if (s[i] == 'p' && s[i + 1] == 'h')
 			s.replace(i, 2, "f");
+	}
+	//
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'P' && s[i + 1] == 'h')
+			s.replace(i, 2, "F");
 	}
 	//// -- 7) 'you' и 'oo' - как 'u'
 	for (int i = 0; i < s.length(); ++i) {
 		if (s[i] == 'y' && s[i + 1] == 'o' && s[i + 2] == 'u')
 			s.replace(i, 3, "u");
 	}
-	//for (int i = 0; i < s.length(); ++i) {
-	//	if (s[i] == 'o' && s[i + 1] == 'o')
-	//		s.replace(i, 2, "u");
-	//}
-	//// --
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'o' && s[i + 1] == 'o')
+			s.replace(i, 2, "u");
+	}
+	//
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'Y' && s[i + 1] == 'o' && s[i + 2] == 'u')
+			s.replace(i, 3, "U");
+	}
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'O' && s[i + 1] == 'o')
+			s.replace(i, 2, "U");
+	}
+	//// -- 8) 'ee' Ц как 'i'
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'e' && s[i + 1] == 'e')
+			s.replace(i, 2, "i");
+	}
+	//
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'E' && s[i + 1] == 'e')
+			s.replace(i, 2, "I");
+	}
+	////-- 9) 'th' Ц как 'z'
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 't' && s[i + 1] == 'h')
+			s.replace(i, 2, "z");
+	}
+	//
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == 'T' && s[i + 1] == 'h')
+			s.replace(i, 2, "Z");
+	}
+	////-- 10)
+	for (int i = 0; i < s.length(); ++i) {
+		if (s[i] == s[i + 1])
+			s.erase(i + 1, 1);
+	}
+	////--
 	cout << "Result:\n";
 	cout << s << endl;
 	return 0;
