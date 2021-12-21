@@ -12,11 +12,11 @@ using namespace std;
 
 int main() {
     cout << "---Enter number of strings: ";
-    int x; // количество строк
+    int x;
     cin >> x;
     while (cin.fail() || cin.peek() != '\n' || x != (long long)x || x <= 0) {
         cin.clear();
-        cin.ignore(99999, '\n');
+        cin.ignore(32767, '\n');
         cout << "Incorrect data has been entered, please try again:\n";
         cin >> x;
     }

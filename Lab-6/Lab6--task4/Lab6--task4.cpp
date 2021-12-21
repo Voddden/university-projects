@@ -33,9 +33,17 @@ using namespace std;
 #include <string>
 
 int main() {
+/*
+- Input:
+Too swift for Theex, too quick for Gallow,
+Too strong for young Prince Joseph to follow.
+- Output:
+Tu svift for Ziks, tu kvik for Galov,
+Tu strong for ung Prinse Josef to folov.
+*/
 	cout << "Enter the string:\n";
 	string s;
-	getline(cin, s, '=');
+	getline(cin, s, '$');
 	if (s.length() > 100) {
 		cout << "The string cannot contain more than 100 characters\n";
 		return 0;

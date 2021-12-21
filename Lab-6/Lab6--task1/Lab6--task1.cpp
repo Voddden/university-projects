@@ -124,8 +124,6 @@ int main() {
         }
         cout << endl;
 
-        //-- освобождение памяти
-
         //arr_1 (m, n)
         for (int i = 0; i < m; ++i) {
             delete[] arr_1[i];

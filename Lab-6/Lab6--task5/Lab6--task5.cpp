@@ -15,57 +15,55 @@
 необходимо вывести его по модулю m.
 */
 
-#include <iostream>
-#include<string>
-
 using namespace std;
-int inputInt(int min, int max)
-{
+#include <iostream>
+#include <string>
+
+int inputInt(int min, int max) {
 	int a;
-	while (true)
-	{
+	while (true) {
 		cin >> a;
-		if (a< max && a > min)
+		if (a < max && a > min)
 			return a;
 		cin.clear();
-		cin.ignore(32000, '\n');
-		cout << "Enter correct word" << endl;
+		cin.ignore(32767, '\n');
+		cout << "Incorrect data has been entered, please try again:" << endl;
 	}
 }
-int WordFound(const int& L, const int& m, const string s1, const string s2)
-{
+
+int WordFound(const int& L, const int& m, const string s1, const string s2) {
 	int ans = 1;
 	int size1 = s1.length();
 	int size2 = s2.length();
-	if (L > size1 + size2)
-	{
+	if (L > size1 + size2) {
 		for (int i = 0; i < L - size1 - size2; i++)
 			ans = (ans * 26) % m;
 		ans = (ans * 2) % m;
 		return ans;
 	}
-	else
-		if (L == size1 + size2)
+	else {
+		if (L == size1 + size2) {
 			return 2;
-		else
-		{
+		}
+		else {
 			ans = 2;
-			int j = 0;												//индекс общих символов для суффикс
-			for (int i = L - size2; i < size1; i++, j++)			//s1 - префикс s2 - суффикс, i - индекс общих символов для префикса 
-				if (s1[i] != s2[j])
-				{
+			int j = 0; //индекс общих символов для суффикс
+			for (int i = L - size2; i < size1; i++, j++) { //s1 - префикс s2 - суффикс, i - индекс общих символов для префикса 
+				if (s1[i] != s2[j]) {
 					ans--;
 					break;
 				}
+			}
 			j = 0;
-			for (int i = L - size1; i < size2; i++, j++)			//s1 - суффикс s2 - префикс
-				if (s2[i] != s1[j])
-				{
+			for (int i = L - size1; i < size2; i++, j++) { //s1 - суффикс s2 - префикс
+				if (s2[i] != s1[j]) {
 					ans--;
 					break;
 				}
+			}
 			return ans;
 		}
+	}
 }
 
 int main() {
@@ -80,4 +78,5 @@ int main() {
 		cout << "\t\t\t" << WordFound(L, m, s1, s2) << endl;
 		--counter;
 	}
+	return 0;
 }
