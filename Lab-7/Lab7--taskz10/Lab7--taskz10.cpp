@@ -23,7 +23,6 @@ long double input(double min, double max) {
 		cin.clear();
 		cin.ignore(99999, '\n');
 		cout << "¬ведены некорректные данные, попробуйте ещЄ раз:\n";
-		//cout << "¬ведены некорректные данные, попробуйте ещЄ раз:\n";
 	}
 }
 

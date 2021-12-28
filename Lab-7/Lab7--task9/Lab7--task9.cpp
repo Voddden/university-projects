@@ -31,7 +31,6 @@ long double input(double min, double max) {
 void toThree(int number, string& Number) {
 	if (number / 3 > 0)
 		toThree(number / 3, Number);
-
 	Number += to_string(number % 3);
 }
 
@@ -44,7 +43,6 @@ void toNew(string Number_, string& Number, int i) {
 	if (atoi(buff_.c_str()) < 1) {
 		string buff = to_string(atoi(buff_.c_str()) + 3);
 		Number[i] = buff[0];
-
 		if (i == 0) {
 			string newNumber;
 			newNumber.resize(Number.length() + 1);
@@ -52,9 +50,7 @@ void toNew(string Number_, string& Number, int i) {
 			newNumber[0] = '2';
 			for (short j = 0, k = 1; j < Number.length(); ++j, ++k)
 				newNumber[k] = Number[j];
-
-			cout << "Число в новой системе: " << newNumber;
-
+			cout << "Число в новой системе счисления: " << newNumber;
 			return;
 		}
 
