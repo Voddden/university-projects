@@ -70,7 +70,7 @@ int main() {
     setlocale(LC_ALL, "rus");
     cout << "---Введите число в 13-чной системе счисления: ";
     string num13;
-    getline(cin, num13);
+    cin >> num13;
 
     int num10 = num13_to_num10(num13);
     //cout << "Число в 10-чной СС: " << num10 << endl;
