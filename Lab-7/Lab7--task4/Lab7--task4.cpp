@@ -1,177 +1,98 @@
 //Лабораторная 7, задача 4. Выполнена Воднев Д. И.
 
-/*Осуществить сложение и вычитание чисел в заданной системе
-счисления. В другую систему счисления не переводить. В системах
-счисления больших десятичной использовать буквы по аналогии с
-шестнадцатеричной системой. Разработать функции для выполнения
-операции сложения и функции для выполнения операции вычитания.
-Предусмотреть ввод положительных и отрицательных чисел.
+/*
+Осуществить сложение и вычитание чисел в заданной системе счисления.
+5) в девятнадцатеричной;
+*/
 
-8) в одиннадцатеричной*/
-
+using namespace std;
 #include <iostream>
 #include <string>
 
+int num19_to_num10(string num19) {
+	int* arr = new int[num19.length()]; // массив цифр числа num19
+	for (int i = 0; i < num19.length(); ++i) {
+		if (num19[i] == 'a') {
+			arr[i] = 10;
+		}
+		else if (num19[i] == 'b') {
+			arr[i] = 11;
+		}
+		else if (num19[i] == 'c') {
+			arr[i] = 12;
+		}
+		else if (num19[i] == 'd') {
+			arr[i] = 13;
+		}
+		else if (num19[i] == 'e') {
+			arr[i] = 14;
+		}
+		else if (num19[i] == 'f') {
+			arr[i] = 15;
+		}
+		else if (num19[i] == 'g') {
+			arr[i] = 16;
+		}
+		else if (num19[i] == 'h') {
+			arr[i] = 17;
+		}
+		else if (num19[i] == 'i') {
+			arr[i] = 18;
+		}
+		else {
+			arr[i] = num19[i] - 48;
+		}
+	}
 
-void Swap(std::string& two) {
-	for (int j = 0, j1 = two.length() - 1; j < two.length() / 2; j++, j1--)
-		std::swap(two[j], two[j1]);
+	int num10 = 0;
+	int razryad = 0;
+	for (int i = num19.length() - 1; i >= 0; --i) {
+		num10 = num10 + arr[i] * pow(19, razryad);
+		++razryad;
+	}
+
+	return num10;
 }
 
-bool cin_string(std::string& s, char* minus) {
-	getline(std::cin, s);
-	int p = 0;
+string num10_to_num19(int num10) {
+	string num19;
 
-	if (s.find('.') == -1) {
-		s.insert(s.length(), ".");
-		s.insert(s.length(), "0000000000");
+	int number_of_digits_in_num19 = 1;
+	int num10_1 = num10;
+	while (num10_1 / 19 > 0) {
+		++number_of_digits_in_num19;
+		num10_1 = num10_1 / 19;
+	}
+	int* arr = new int[number_of_digits_in_num19]; // массив цифр num19 (задом наперед)
+	for (int i = 0; i < number_of_digits_in_num19; ++i) {
+		arr[i] = num10 % 19;
+		num10 /= 19;
 	}
 
-	if (s[0] == '-') {
-		minus[0] = '1';
-		s.erase(0, 1);
+	int c;
+	for (int i = 0; i < (number_of_digits_in_num19 / 2); i++) { // переворачивание массива цифр num19
+		c = arr[i];
+		arr[i] = arr[number_of_digits_in_num19 - 1 - i];
+		arr[number_of_digits_in_num19 - 1 - i] = c;
 	}
-	for (int e = 0; e < s.length(); e++) {
-		if (s[e] == '.' || s[0] == '.' || s[s.length() - 1] == '.') {
-			p++;
-		}
-		while (p > 1) {
-			std::cout << "Неверное значение!\n";
-			return 0;
-		}
-	}
-	for (int e = 0; e < s.length(); e++) {
-		while ((s[e] < '0' || s[e]>'9') && s[e] != '.' && s[e] != 'A') {
-			std::cout << "Неверное значение!\n";
-			return 0;
-		}
-	}
-	return 1;
-}
 
-bool cin_to_dop(std::string& s) {
-	char minus[] = "0";
-
-	if (!cin_string(s, minus)) return 0;
-	if (minus[0] == '1') s = '-' + s;
-	return 1;
-}
-
-std::string suma(std::string two, std::string two2) {
-	std::string s;
-
-	Swap(two);
-	Swap(two2);
-
-	two.erase(10, 1);
-	two2.erase(10, 1);
-	two += '0';
-	two2 += '0';
-	if (two.length() > two2.length())
-		for (int y = 0, y1 = two.length() - two2.length(); y < y1; y++)
-			two2 += '0';
-	if (two.length() < two2.length())
-		for (int y = 0, y1 = two2.length() - two.length(); y < y1; y++)
-			two += '0';
-
-	int c, t = 0, dv, dv2;
-	s = "";
-	for (int y = 0; y < two.length(); y++) {
-		if (two[y] == 'A') dv = 10;
-		else dv = two[y] - '0';
-		if (two2[y] == 'A') dv2 = 10;
-		else dv2 = two2[y] - '0';
-		c = dv + dv2 + t;
-		if (c < 10) {
-			s += c + '0';
-			t = 0;
-			continue;
-		}
-		if (c == 10) {
-			s += 'A';
-			t = 0;
-			continue;
-		}
-		c--;
-		if (c > 10) {
-			s += c + '0' - 10;
-			t = 1;
-			continue;
-		}
-		if (c == 10) {
-			s += '0';
-			t = 1;
-			continue;
-		}
-	}
-	s.insert(10, ".");
-	Swap(s);
-	while (s[0] == '0') s.erase(0, 1);
-	if (s[0] == '.') s.insert(0, "0");
-	return s;
-}
-
-std::string min(std::string two, std::string two2) {
-	std::string s;
-
-	Swap(two);
-	Swap(two2);
-
-	two.erase(10, 1);
-	two2.erase(10, 1);
-	two += '0';
-	two2 += '0';
-	if (two.length() > two2.length())
-		for (int y = 0, y1 = two.length() - two2.length(); y < y1; y++)
-			two2 += '0';
-	if (two.length() < two2.length())
-		for (int y = 0, y1 = two2.length() - two.length(); y < y1; y++)
-			two += '0';
-
-	int c, t = 0, dv, dv2;
-	s = "";
-	for (int y = 0; y < two.length(); y++) {
-		if (two[y] == 'A') dv = 10;
-		else dv = two[y] - '0';
-		if (two2[y] == 'A') dv2 = 10;
-		else dv2 = two2[y] - '0';
-		c = dv - dv2 - t;
-		if (c >= 0) {
-			s += c + '0';
-			t = 0;
-			continue;
-		}
-		else c = 11 + c;
-		if (c == 10) {
-			s += 'A';
-			t = 1;
-			continue;
-		}
-		if (c >= 0) {
-			s += c + '0';
-			t = 1;
-			continue;
-		}
-	}
-	s.insert(10, ".");
-	Swap(s);
-	while (s[0] == '0') s.erase(0, 1);
-	if (s[0] == '.') s.insert(0, "0");
-	return s;
+	return num19;
 }
 
 int main() {
 	setlocale(LC_ALL, "ru");
+	string num1_cc19;
+	string num2_cc19;
 
-	std::string s, s3, s2;
+	cout << "Введите 1-ое число в 19-чной сс: ";
+	cin >> num1_cc19;
+	cout << "Введите 2-ое число в 19-чной сс: ";
+	cin >> num1_cc19;
 
-	if (!cin_to_dop(s)) return 0;
-	if (!cin_to_dop(s2)) return 0;
-	s3 = suma(s, s2);
-
-	std::cout << "\nСумма: " << s3;
-	s3 = min(s, s2);
-	std::cout << "\n\nВычетание: " << s3;
-
+	int num1_cc10 = num19_to_num10(num1_cc19);
+	int num2_cc10 = num19_to_num10(num2_cc19);
+	int sum = num1_cc10 + num2_cc10;
+	
+	//cout << "Ваше число в 10-чной сс: " << num19_to_num10(num19) << endl;
 	return 0;
 }
