@@ -55,8 +55,6 @@ int num19_to_num10(string num19) {
 }
 
 string num10_to_num19(int num10) {
-	string num19;
-
 	int number_of_digits_in_num19 = 1;
 	int num10_1 = num10;
 	while (num10_1 / 19 > 0) {
@@ -76,6 +74,44 @@ string num10_to_num19(int num10) {
 		arr[number_of_digits_in_num19 - 1 - i] = c;
 	}
 
+	char* symbarr = new char[number_of_digits_in_num19];
+	for (int i = 0; i < number_of_digits_in_num19; ++i) {
+		if (arr[i] == 10) {
+			symbarr[i] = 'a';
+		}
+		else if (arr[i] == 11) {
+			symbarr[i] = 'b';
+		}
+		else if (arr[i] == 12) {
+			symbarr[i] = 'c';
+		}
+		else if (arr[i] == 13) {
+			symbarr[i] = 'd';
+		}
+		else if (arr[i] == 14) {
+			symbarr[i] = 'e';
+		}
+		else if (arr[i] == 15) {
+			symbarr[i] = 'f';
+		}
+		else if (arr[i] == 16) {
+			symbarr[i] = 'g';
+		}
+		else if (arr[i] == 17) {
+			symbarr[i] = 'h';
+		}
+		else if (arr[i] == 18) {
+			symbarr[i] = 'i';
+		}
+		else {
+			symbarr[i] = arr[i] + 48;
+		}
+	}
+	string num19;
+	for (int i = 0; i < number_of_digits_in_num19; ++i) {
+		num19.insert(i, 1, symbarr[i]);
+	}
+
 	return num19;
 }
 
@@ -87,12 +123,13 @@ int main() {
 	cout << "¬ведите 1-ое число в 19-чной сс: ";
 	cin >> num1_cc19;
 	cout << "¬ведите 2-ое число в 19-чной сс: ";
-	cin >> num1_cc19;
+	cin >> num2_cc19;
 
 	int num1_cc10 = num19_to_num10(num1_cc19);
 	int num2_cc10 = num19_to_num10(num2_cc19);
-	int sum = num1_cc10 + num2_cc10;
-	
-	//cout << "¬аше число в 10-чной сс: " << num19_to_num10(num19) << endl;
+	int sum_cc10 = num1_cc10 + num2_cc10;
+	string sum_cc19 = num10_to_num19(sum_cc10);
+	//cout << "—умма:\n" << "cc10: " << sum_cc10;
+	cout << "—умма в 19-чной сс: " << sum_cc19 << endl;
 	return 0;
 }
