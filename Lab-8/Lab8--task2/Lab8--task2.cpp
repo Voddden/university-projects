@@ -1,13 +1,5 @@
 //Лабораторная 8, задача 2 Выполнена: Воднев Д. И.
 
-/*
-5. В справочной аэропорта хранится расписание вылета самолетов
-на следующие сутки. Для каждого рейса указаны: номер рейса, тип
-самолета, пункт назначения, время вылета. Вывести все номера рейсов, типы
-самолетов и времена вылета для заданного пункта назначения в порядке
-возрастания времени вылета.
-*/
-
 using namespace std;
 #include <iostream>
 
@@ -32,11 +24,46 @@ struct flight {
 
 int main() {
     setlocale(LC_ALL, "ru");
+
     cout << "---Введите кол-во полётов: ";
     int number_of_flights = inputInt();
     flight* arr = new flight[number_of_flights];
     for (int i = 0; i < number_of_flights; ++i) {
+        cout << "---Введите номер " << i + 1 << "-го рейса: ";
+        arr[i].number = inputInt();
+    }
+    
+    for (int i = 0; i < number_of_flights; ++i) {
+        cout << "---Введите время вылета " << i + 1 << "-го рейса: ";
+        cin >> arr[i].time;
+    }
 
+    for (int i = 0; i < number_of_flights; ++i) {
+        cout << "---Введите пункт назначения " << i + 1 << "-го рейса: ";
+        cin >> arr[i].destination;
+    }
+
+    for (int i = 0; i < number_of_flights; ++i) {
+        cout << "---Введите тип самолёта " << i + 1 << "-го рейса: ";
+        cin >> arr[i].planeType;
+    }
+
+    ////// вывод структуры
+    cout << "\nНомера рейсов:\n";
+    for (int i = 0; i < number_of_flights; ++i) {
+        cout << arr[i].number << endl;
+    }
+    cout << "\nВремя вылета рейсов:\n";
+    for (int i = 0; i < number_of_flights; ++i) {
+        cout << arr[i].time << endl;
+    }
+    cout << "\nПункты назначения:\n";
+    for (int i = 0; i < number_of_flights; ++i) {
+        cout << arr[i].destination << endl;
+    }
+    cout << "\nТипы самолётов:\n";
+    for (int i = 0; i < number_of_flights; ++i) {
+        cout << arr[i].planeType << endl;
     }
 
     return 0;
