@@ -1,124 +1,118 @@
 //Лабораторная 8, задача 1 Выполнена: Воднев Д. И.
 
-#include<iostream>
-#include<string>
-#include<cstdio>
+/*
+5. На междугородной АТС информация о разговорах содержит
+дату разговора, код и название города, время разговора, тариф, номер
+телефона абонента. Вывести для заданного города общее время разговоров с ним
+и сумму (сортировка обменом по убыванию).
+*/
+
 using namespace std;
 
-struct Team
-{
-    string country;
-    string teamName;
-    string lastName;
-    int number;
-    int age;
-    int height;
-    int weight;
-};
+#include<iostream>
+#include<string>
 
-
-void ShellSort(int n, Team mass[])
-{
-    int i, j, step, tmp, tr = 0;
-    for (step = n / 2; step > 0; step /= 2)
-        for (i = step; i < n; i++)
-        {
-            tmp = mass[i].age;
-            for (j = i; j >= step; j -= step)
-            {
-                if (tmp < mass[j - step].age)
-                    mass[j].age = mass[j - step].age;
-                else
-                    break;
-            }
-            mass[j].age = tmp;
-        }
-    cout << endl;
-
-    for (int i = 0; i < n; i++) {
-        if (mass[i].age > 20) {
-            cout << mass[i].lastName << " " << mass[i].age << " let";
-            for (int j = 0; j < n - 1; j++)
-                cout << ", ";
-            tr++;
-        }
+int inputInt() {
+    int value;
+    cin >> value;
+    while (cin.fail() || cin.peek() != '\n' || value != (long long)value || value <= 0) {
+        cin.clear();
+        cin.ignore(32767, '\n');
+        cout << "Введены некорректные данные, попробуйте ещё раз:\n";
+        cin >> value;
     }
-    if (tr == 0)
-        cout << "ti pedofil:)";
+    return value;
+}
+
+//void BubbleSort(int size, call arr[]) {
+//    int temp;
+//    for (int i = 0; i < size - 1; i++) {
+//        for (int j = 0; j < size - i - 1; j++) {
+//            if (arr[j] > arr[j + 1]) {
+//                temp = arr[j];
+//                arr[j] = arr[j + 1];
+//                arr[j + 1] = temp;
+//            }
+//        }
+//    }
+//}
+
+struct call {
+    string date;
+    string city;
+    string time;
+    int code;
+    int tarif;
+    int phoneNumber;
 };
 
 int main() {
-    //int* Participant  = new int ();
-    int numb, k;
-    string s;
-    cout << "set numb of participants: "; cin >> numb;
-    getline(cin, s);
-    Team* a;
-    a = new Team[numb];
-    for (int i = 0; i < numb; i++) {
-        cout << "\nset country of " << i + 1 << " participant: ";
-        while (std::cin.fail()) {
-            std::cout << "incorrect input data";
-            return 0;
-        }
-        getline(cin, a[i].country);
-    }
-    for (int i = 0; i < numb; i++) {
-        cout << "\nset TeamName of " << i + 1 << " participant: ";
-        while (std::cin.fail()) {
-            std::cout << "incorrect input data";
-            return 0;
-        }
-        getline(cin, a[i].teamName);
-    }
-    for (int i = 0; i < numb; i++) {
-        cout << "\nset LastName of " << i + 1 << " participant: ";
-        while (std::cin.fail()) {
-            std::cout << "incorrect input data";
-            return 0;
-        }
-        getline(cin, a[i].lastName);
-    }
-    for (int i = 0; i < numb; i++) {
-        cout << "\nset Number of " << i + 1 << " participant: ";
-        while (std::cin.fail()) {
-            std::cout << "incorrect input data";
-            return 0;
-        }
-        cin >> a[i].number;
-    }
-    cout << "stop?(1(y),2(n))"; cin >> k;
-    if (k == 1)
-        return 0;
+    setlocale(LC_ALL, "ru");
+    int number_of_calls;
 
-    for (int i = 0; i < a[i].number; i++) {
-        cout << "\nset Age of " << i + 1 << " participant: ";
-        while (std::cin.fail()) {
-            std::cout << "incorrect input data";
-            return 0;
-        }
-        cin >> a[i].age;
+    cout << "---Введите кол-во звонков: ";
+    number_of_calls = inputInt();
+    call* arr = new call[number_of_calls];
+    
+    //cout << "Введите дату разговора";
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << "---Введите дату разговора " << i + 1 << "-го звонка: ";
+        cin >> arr[i].date;
     }
-    for (int i = 0; i < a[i].number; i++) {
-        cout << "\nset Height of " << i + 1 << " participant: ";
-        while (std::cin.fail()) {
-            std::cout << "incorrect input data";
-            return 0;
-        }
-        cin >> a[i].height;
+
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << "---Введите город " << i + 1 << "-го звонка: ";
+        cin >> arr[i].city;
     }
-    for (int i = 0; i < a[i].number; i++) {
-        cout << "\nset Weight of " << i + 1 << " participant: ";
-        while (std::cin.fail()) {
-            std::cout << "incorrect input data";
-            return 0;
-        }
-        cin >> a[i].weight;
+
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << "---Введите время " << i + 1 << "-го звонка: ";
+        cin >> arr[i].time;
     }
-    getline(cin, s);
-    cout << "vivesti massiv?(1(y),2(n))"; cin >> k;
-    if (k == 1)
-        for (int i = 0; i < numb; i++)
-            cout << a[i].teamName;
-    ShellSort(numb, a);
+
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << "---Введите код " << i + 1 << "-го звонка: ";
+        arr[i].code = inputInt();
+    }
+
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << "---Введите тариф " << i + 1 << "-го звонка: ";
+        arr[i].tarif = inputInt();
+    }
+
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << "---Введите номер " << i + 1 << "-го звонка: ";
+        arr[i].phoneNumber = inputInt();
+    }
+
+    //// вывод структуры
+    //cout << "Изначальные данные:\n";
+    cout << "\nДаты звонков:\n";
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << arr[i].date << endl;
+    }
+    cout << "\nГорода звонков:\n";
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << arr[i].city << endl;
+    }
+    cout << "\nВремя звонков:\n";
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << arr[i].time << endl;
+    }
+    cout << "\nКоды звонков:\n";
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << arr[i].code << endl;
+    }
+    cout << "\nТарифы звонков:\n";
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << arr[i].tarif << endl;
+    }
+    cout << "\nНомера телефонов:\n";
+    for (int i = 0; i < number_of_calls; ++i) {
+        cout << arr[i].phoneNumber << endl;
+    }
+    
+    //cout << "Введите город (существующий в структуре) у к-го хотите узнать общее время разговоров";
+
+    return 0;
 }
