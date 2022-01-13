@@ -112,7 +112,8 @@ int main() {
         int e = 0;
         for (int i = 0; i < q; ++i) {
             for (int j = 0; arr_2[i][j] != 3; ++j) {
-                if (arr_2[i][j] % 2 == 1) ++temparr_2[i];
+                if (arr_2[i][j] % 2 == 1) 
+                    ++temparr_2[i];
             }
         }
 

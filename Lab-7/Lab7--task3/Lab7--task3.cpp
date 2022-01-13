@@ -42,10 +42,12 @@ string to_dopCode(string str) {
         }
         str[count] = '1';
     }
+    
     return str;
 }
 
 int main() {
+
     setlocale(LC_ALL, "Rus");
     int num1_cc10 = -127, num2_cc10 = 0;
     cout << "---¬ведите 1-ое число в естественной форме: ";
@@ -68,6 +70,7 @@ int main() {
     }
     //cout << num1_priamCode;
     bitset<8> num1_obrCode(num1_priamCode);
+    
     for (int i = 0; i < 7; ++i) {
         num1_obrCode.flip(i);
     }

@@ -35,7 +35,8 @@ void convert_to_10(short a) {
 }
 
 void convert_to_3(short a, string& Digit) {
-	if (a / 3) convert_to_3(a / 3, Digit);
+	if (a / 3) 
+		convert_to_3(a / 3, Digit);
 	string temp = to_string(a % 3);
 	Digit.push_back(temp[0]);
 }
@@ -58,17 +59,25 @@ int main() {
 	char burrels[][6] = { "....0", "...0.", "..0..", ".0...", "0...." };
 
 	for (short i = 0; i < 5; ++i) {
-		if (burrels[i][4 - i] == POISON[4 - i]) WINE[4 - i] = burrels[i][4 - i];
-		else WINE[4 - i] = '1';
+		if (burrels[i][4 - i] == POISON[4 - i]) 
+			WINE[4 - i] = burrels[i][4 - i];
+		else 
+			WINE[4 - i] = '1';
 	}
-	if (WINE == POISON) { convert_to_10(atoi(WINE.c_str())); return (0); }
+	if (WINE == POISON) { 
+		convert_to_10(atoi(WINE.c_str())); 
+		return (0); 
+	}
 
 	for (short i = 0; i < 5; ++i)
-		if (WINE[4 - i] != burrels[i][4 - i]) burrels[i][4 - i] = '1';
+		if (WINE[4 - i] != burrels[i][4 - i]) 
+			burrels[i][4 - i] = '1';
 
 	for (short i = 0; i < 5; ++i) {
-		if (burrels[i][4 - i] == POISON[4 - i]) WINE[4 - i] = burrels[i][4 - i];
-		else WINE[4 - i] = '2';
+		if (burrels[i][4 - i] == POISON[4 - i]) 
+			WINE[4 - i] = burrels[i][4 - i];
+		else 
+			WINE[4 - i] = '2';
 	}
 
 	convert_to_10(atoi(WINE.c_str()));

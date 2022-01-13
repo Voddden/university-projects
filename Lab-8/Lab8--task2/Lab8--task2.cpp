@@ -29,7 +29,7 @@ int main() {
     int number_of_flights = inputInt();
     flight* arr = new flight[number_of_flights];
     for (int i = 0; i < number_of_flights; ++i) {
-        cout << "---¬ведите номер " << i + 1 << "-го рейса: ";
+        cout << "---¬ведите номер " << i + 1 << "-го рейса: ";  
         arr[i].number = inputInt();
     }
     
