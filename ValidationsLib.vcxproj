@@ -19,13 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DateValidation.h" />
     <ClInclude Include="inputInteger.h" />
     <ClInclude Include="inputNatural.h" />
     <ClInclude Include="inputNaturalAnd0.h" />
     <ClInclude Include="inputReal.h" />
     <ClInclude Include="inputRealPositive.h" />
+    <ClInclude Include="Validation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DateValidation.cpp" />
     <ClCompile Include="inputInteger.cpp" />
     <ClCompile Include="inputNatural.cpp" />
     <ClCompile Include="inputNaturalAnd0.cpp" />

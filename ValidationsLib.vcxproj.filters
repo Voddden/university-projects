@@ -30,6 +30,12 @@
     <ClInclude Include="inputRealPositive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DateValidation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Validation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="inputReal.cpp">
@@ -45,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="inputRealPositive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DateValidation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
