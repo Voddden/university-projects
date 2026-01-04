@@ -1,0 +1,12 @@
+#pragma once
+#include "addEquipment.h"
+#include "availabilityInSorage.h"
+#include "daysInMonth.h"
+#include "deleteEquipment.h"
+#include "editEquipment.h"
+#include "EquipmentType.h"
+#include "partNameCheck.h"
+#include "scan-printEquipment.h"
+#include "sortEquipment.h"
+#include "swapEquipment.h"
+#include "Validation.h"
