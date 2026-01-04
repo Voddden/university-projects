@@ -1,0 +1,5 @@
+﻿  account.cpp
+C:\Users\Danik Vodnev\source\repos\ЛАБЫ\Danik_Vodnev_153504\Lab-5\DynamicLib\account.cpp(7): warning C4715: 'account': not all control paths return a value
+     Creating library C:\Users\Danik Vodnev\source\repos\ЛАБЫ\Danik_Vodnev_153504\Lab-5\x64\Debug\DynamicLib.lib and object C:\Users\Danik Vodnev\source\repos\ЛАБЫ\Danik_Vodnev_153504\Lab-5\x64\Debug\DynamicLib.exp
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\Danik Vodnev\source\repos\ЛАБЫ\Danik_Vodnev_153504\Lab-5\x64\Debug\DynamicLib.exe : fatal error LNK1120: 1 unresolved externals
