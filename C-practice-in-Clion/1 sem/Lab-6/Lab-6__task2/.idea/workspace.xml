@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Lab_6__task2" targetName="Lab_6__task2" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a7836248-960f-4a0b-a244-e9ae78264c69" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/.idea/Lab-5__task1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/Lab-5__task1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/Validation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/Validation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-b6d2941f8ac63f25eea6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-68f604e4a3096334493b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1c034edbf9573ca743dd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-08T09-33-24-0963.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/reply/target-Lab_5__task1-Debug-84e3d2acc6939cf9127a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-879ae172463b8b264ea5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/Lab_5__task1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task1/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/.idea/Lab-5__task2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/Lab-5__task2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/Validation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/Validation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/reply/cache-v2-611f62be469cac9646e7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-960623733000b8003fad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5ba26d588d6ae600de4f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-08T09-33-33-0884.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/reply/target-Lab_5__task2-Debug-924330bb3b2d2a883f0b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-879ae172463b8b264ea5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/Lab_5__task2.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task2/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/.idea/Lab-5__task3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/Lab-5__task3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/Validation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/Validation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/reply/cache-v2-6b7bf60d041bc3d95c68.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a94be239b41d7f0dcbb1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-28e0c71df0353161b0be.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-04T12-33-23-0496.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/reply/target-Lab_5__task3-Debug-2758013e5c9a6e8fa385.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-879ae172463b8b264ea5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/Lab_5__task3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-5/Lab-5__task3/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/.idea/Lab-6__task1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/Lab-6__task1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/Validation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/Validation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-4bb9e7ad2fbc605cb996.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-290bf51b9ea9ea11dc07.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-635a5768102e6f3af08e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-08T09-33-15-0149.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/reply/target-Lab_6__task1-Debug-0a5f27c0dd09290dec9f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-879ae172463b8b264ea5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/Lab_6__task1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task1/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/.idea/Lab-6__task2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/Lab-6__task2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/Validation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/Validation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/reply/cache-v2-cf41cd48962376d09e56.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-d445ebf07b920e9c03ed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8a4d981103d37669037d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-06T17-42-39-0255.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/reply/target-Lab_6__task2-Debug-fe7f2bc77fab7e9c6f1e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-879ae172463b8b264ea5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/Lab_6__task2.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/mergeSort.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-6/Lab-6__task2/mergeSort.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/.idea/Lab-7.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/.idea/Lab-7__task1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/Lab-7__task1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/Validation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/Validation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-2ac9102dd60e5ee7c63d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c250487551df8650e1f8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5318ee47f3be6331590d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-10T17-42-59-0713.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/reply/target-Lab_7__task1-Debug-6165cf7e44d1d71eec90.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-879ae172463b8b264ea5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/Lab_7__task1.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/Lab_7__task1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task1/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/.idea/Lab-7__task2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/Lab-7__task2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/Validation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/Validation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/reply/cache-v2-91ec031c269440357d45.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-fb449217be5cb476db9d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-34c5573e925120a15c5e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-18T17-57-24-0362.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/reply/target-Lab_7__task2-Debug-13792d62f8f600bd8aa9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-879ae172463b8b264ea5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/Lab_7__task2.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task2/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/.idea/Lab-7__task3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/Lab-7__task3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/Validation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/Validation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/reply/cache-v2-59d8521401df2c1f901d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-1e83ff56f8279f415970.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-abd0b89cffbe422c35c2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-18T19-08-28-0193.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/reply/target-Lab_7__task3-Debug-95bb910c2ed64037316c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-879ae172463b8b264ea5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/Lab_7__task3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1 сем/Lab-7/Lab-7__task3/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab-1/Lab1__task1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab-1/Lab1__task1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Lab-1/Lab1__task1/Lab1__task1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lab-1/Lab1__task1/Lab1__task1.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="2.4" />
+  </component>
+  <component name="ProjectId" id="2ISIe1bbb2jGea0JyRHu0YNIPQ7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "D:/1. My repos/Clion-OAIP-Labs/1 sem/Lab-7/Lab-7__task2"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab_6__task2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Lab_6__task2" TARGET_NAME="Lab_6__task2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Lab_6__task2" RUN_TARGET_NAME="Lab_6__task2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7836248-960f-4a0b-a244-e9ae78264c69" name="Changes" comment="" />
+      <created>1670168650046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670168650046</updated>
+      <workItem from="1670168652012" duration="7078000" />
+      <workItem from="1670228478817" duration="6735000" />
+      <workItem from="1670333438496" duration="6718000" />
+      <workItem from="1670491963596" duration="1264000" />
+      <workItem from="1670499409711" duration="223000" />
+      <workItem from="1670500346483" duration="609000" />
+      <workItem from="1670507237882" duration="609000" />
+      <workItem from="1674241169059" duration="1194000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Lab-6__task2.cpp</url>
+          <line>125</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="arr[0][0]" language="ObjectiveC" />
+        <watch expression="arr[0][1]" language="ObjectiveC" />
+        <watch expression="arr[0][2]" language="ObjectiveC" />
+        <watch expression="arr[0][3]" language="ObjectiveC" />
+        <watch expression="arr[1][0]" language="ObjectiveC" />
+        <watch expression="arr[1][1]" language="ObjectiveC" />
+        <watch expression="arr[1][2]" language="ObjectiveC" />
+        <watch expression="arr[1][3]" language="ObjectiveC" />
+        <watch expression="arr[2][0]" language="ObjectiveC" />
+        <watch expression="arr[2][1]" language="ObjectiveC" />
+        <watch expression="arr[2][2]" language="ObjectiveC" />
+        <watch expression="arr[2][3]" language="ObjectiveC" />
+        <watch expression="arr[3][0]" language="ObjectiveC" />
+        <watch expression="arr[3][1]" language="ObjectiveC" />
+        <watch expression="arr[3][2]" language="ObjectiveC" />
+        <watch expression="arr[3][3]" language="ObjectiveC" />
+        <watch expression="mas[0][0]" language="ObjectiveC" />
+        <watch expression="mas[0][1]" language="ObjectiveC" />
+        <watch expression="mas[0][2]" language="ObjectiveC" />
+        <watch expression="mas[1][0]" language="ObjectiveC" />
+        <watch expression="mas[1][1]" language="ObjectiveC" />
+        <watch expression="mas[1][2]" language="ObjectiveC" />
+        <watch expression="mas[2][0]" language="ObjectiveC" />
+        <watch expression="mas[2][1]" language="ObjectiveC" />
+        <watch expression="mas[2][2]" language="ObjectiveC" />
+        <watch expression="mas[3][0]" language="ObjectiveC" />
+        <watch expression="mas[3][1]" language="ObjectiveC" />
+        <watch expression="mas[3][2]" language="ObjectiveC" />
+        <watch expression="sumEven[0]" language="ObjectiveC" />
+        <watch expression="sumEven[1]" language="ObjectiveC" />
+        <watch expression="sumEven[2]" language="ObjectiveC" />
+        <watch expression="sumEven[3]" language="ObjectiveC" />
+        <watch expression="sumEven[k]" language="ObjectiveC" />
+        <watch expression="sumEven[k + 1]" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

@@ -1,0 +1,10 @@
+# ninja log v5
+82	157	6920517664892214	Lab_6__task2.exe	db51bf7c2505430
+7	133	6918723548179129	CMakeFiles/Lab_6__task2.dir/Validation.cpp.obj	ababfbb8567dfdc9
+1	345	6959443728500115	build.ninja	c34d95211dfba363
+2	81	6920517664163039	CMakeFiles/Lab_6__task2.dir/Lab-6__task2.cpp.obj	9efa4da04d0e5e04
+5	74	6920517664082180	CMakeFiles/Lab_6__task2.dir/mergeSort.cpp.obj	bb63885e51163f20
+17	145	6959444344539167	CMakeFiles/Lab_6__task2.dir/mergeSort.cpp.obj	d8024ed0816cc018
+3	154	6959444344790152	CMakeFiles/Lab_6__task2.dir/Lab-6__task2.cpp.obj	d6a7ba1080e1dc00
+11	158	6959444344847956	CMakeFiles/Lab_6__task2.dir/Validation.cpp.obj	e71c4ec9347464d1
+158	286	6959444346101187	Lab_6__task2.exe	db51bf7c2505430

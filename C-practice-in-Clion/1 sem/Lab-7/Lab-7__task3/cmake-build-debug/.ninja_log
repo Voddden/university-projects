@@ -1,0 +1,9 @@
+# ninja log v5
+284	469	6933327243665368	Lab_7__task3.exe	dc9b2772c3f378cc
+3	284	6933327241862102	CMakeFiles/Lab_7__task3.dir/Lab-7__task3.cpp.obj	bb68aff5abf7a169
+4	112	6930937360038191	CMakeFiles/Lab_7__task3.dir/Validation.cpp.obj	e678809fd18f1853
+2	112	6959452433993898	CMakeFiles/Lab_7__task3.dir/Lab-7__task3.cpp.obj	958a693de6c9867e
+9	127	6959452434168410	CMakeFiles/Lab_7__task3.dir/Validation.cpp.obj	1eb01dc06f147594
+128	229	6959452435144240	Lab_7__task3.exe	dc9b2772c3f378cc
+1	183	6959454407399707	CMakeFiles/Lab_7__task3.dir/Lab-7__task3.cpp.obj	958a693de6c9867e
+183	336	6959454408864083	Lab_7__task3.exe	dc9b2772c3f378cc

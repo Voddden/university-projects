@@ -1,0 +1,8 @@
+# ninja log v5
+126	213	6918689880137308	Lab_6__task1.exe	727614195a4fbc81
+8	140	6918608912970484	CMakeFiles/Lab_6__task1.dir/Validation.cpp.obj	c67f506dea5c0922
+0	111	6958377661984485	build.ninja	4ed48724dee6a855
+1	126	6918689879287316	CMakeFiles/Lab_6__task1.dir/Lab-6__task1.cpp.obj	59478551ee2f0cbc
+6	139	6958378717433923	CMakeFiles/Lab_6__task1.dir/Lab-6__task1.cpp.obj	8aa5e45ed065aaf2
+2	145	6958378717493936	CMakeFiles/Lab_6__task1.dir/Validation.cpp.obj	60ec72a25af0cf07
+145	222	6958378718242767	Lab_6__task1.exe	727614195a4fbc81
