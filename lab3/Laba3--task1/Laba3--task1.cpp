@@ -1,0 +1,34 @@
+﻿//Лабораторная 3, задача 1 Выполнена: 
+
+/*
+    вычислить сумму, использую цикл while
+*/
+
+using namespace std;
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    setlocale(LC_ALL, "Rus");
+    cout << "Привет!\n";
+
+    double N = 0, a, b;
+    int i = 1;
+    while (i <= 30) {
+        if (i % 2 == 1) { // нечётное
+            a = i;
+            b = i * i;
+            N += (a - b) * (a - b);
+        }
+        else if (i % 2 == 0) { // чётное
+            a = i / 2;
+            b = i * i * i;
+            N += (a - b) * (a - b);
+        }
+
+        ++i;
+    }
+    cout << "Ответ:\n" << setprecision(10) << N << endl;
+
+    return 0;
+}
